@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Serendip.AI</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serendip.AI - Find Amazing AI Projects</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: #000;
+      min-height: 100vh;
+      color: #fff;
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(120, 120, 120, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(120, 120, 120, 0.1) 0%, transparent 50%);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 0px #000;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .header h1::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(0deg,
+          transparent,
+          transparent 2px,
+          rgba(255, 255, 255, 0.1) 2px,
+          rgba(255, 255, 255, 0.1) 4px);
+      pointer-events: none;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+
+    .stumble-button {
+      background: #fff;
+      color: #000;
+      border: 3px solid #000;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Courier New', monospace;
+      position: relative;
+      box-shadow: 5px 5px 0px #000;
+    }
+
+    .stumble-button:hover {
+      background: #000;
+      color: #fff;
+      transform: translate(2px, 2px);
+      box-shadow: 3px 3px 0px #fff;
+    }
+
+    .stumble-button:active {
+      transform: translate(5px, 5px);
+      box-shadow: 0px 0px 0px #000;
+    }
+
+    .project-card {
+      background: #fff;
+      color: #000;
+      border: 4px solid #000;
+      padding: 30px;
+      margin: 30px 0;
+      box-shadow: 8px 8px 0px #000;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 2px dashed #000;
+      pointer-events: none;
+    }
+
+    .project-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project-title {
+      font-size: 1.8rem;
+      color: #000;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #000;
+      padding-bottom: 10px;
+    }
+
+    .project-emoji {
+      font-size: 2rem;
+      filter: grayscale(100%) contrast(1000%);
+    }
+
+    .project-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #000;
+      margin-bottom: 20px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      background: #000;
+      color: #fff;
+      padding: 5px 12px;
+      border: 2px solid #000;
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .project-link {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 25px;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      box-shadow: 4px 4px 0px #000;
+      border: 2px solid #000;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .project-link:hover {
+      background: #fff;
+      color: #000;
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px #000;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .control-btn {
+      background: #fff;
+      color: #000;
+      border: 3px solid #fff;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Courier New', monospace;
+      box-shadow: 3px 3px 0px #fff;
+    }
+
+    .control-btn:hover {
+      background: #000;
+      color: #fff;
+      transform: translate(1px, 1px);
+      box-shadow: 2px 2px 0px #fff;
+    }
+
+    .stats {
+      text-align: center;
+      color: #fff;
+      margin: 20px 0;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-family: 'Courier New', monospace;
+    }
+
+    .loading {
+      text-align: center;
+      color: #fff;
+      font-size: 1.2rem;
+      margin: 20px 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .spinner {
+      border: 3px solid #333;
+      border-top: 3px solid #fff;
+      border-radius: 0;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 10px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .favorite-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: transform 0.2s ease;
+      filter: grayscale(100%) contrast(1000%);
+    }
+
+    .favorite-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .category-filter {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .category-btn {
+      background: #fff;
+      color: #000;
+      border: 2px solid #fff;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+      font-family: 'Courier New', monospace;
+      box-shadow: 2px 2px 0px #fff;
+    }
+
+    .category-btn:hover {
+      background: #000;
+      color: #fff;
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0px #fff;
+    }
+
+    .category-btn.active {
+      background: #000;
+      color: #fff;
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 0px #fff;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .project-card {
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      .controls {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>█ Serendip.AI █</h1>
+      <p>// DISCOVER AMAZING AI PROJECTS //</p>
+      <button class="stumble-button" onclick="stumbleToNext()">>> STUMBLE! << </button>
+    </div>
+
+    <div class="loading" id="loading" style="display: none;">
+      <div class="spinner"></div>
+      Finding something amazing...
+    </div>
+
+    <div id="currentProject"></div>
+
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    let currentCategory = 'all';
+    let favorites = [];
+    const projects = [{
+        title: "This Person Does Not Exist",
+        emoji: "👤",
+        description: "An AI that generates incredibly realistic faces of people who don't actually exist using StyleGAN. Each refresh creates a completely new person.",
+        tags: ["AI", "Neural Networks", "Computer Vision"],
+        link: "https://thispersondoesnotexist.com",
+        category: "ai-tools"
+      },
+      {
+        title: "AI Dungeon",
+        emoji: "🏰",
+        description: "An infinitely generated text adventure game powered by AI. Create any story, go anywhere, do anything in this AI-powered storytelling experience.",
+        tags: ["AI", "Gaming", "Text Generation"],
+        link: "https://play.aidungeon.io",
+        category: "games"
+      },
+      {
+        title: "Artbreeder",
+        emoji: "🎨",
+        description: "Collaborative AI art tool that lets you create and explore images using GANs. Mix and breed images to create endless variations.",
+        tags: ["AI", "Art", "Creative"],
+        link: "https://www.artbreeder.com",
+        category: "creative"
+      },
+      {
+        title: "RunwayML",
+        emoji: "✨",
+        description: "Creative AI tools for artists and creators. Generate videos, images, and audio with cutting-edge machine learning models.",
+        tags: ["AI", "Creative", "Video"],
+        link: "https://runwayml.com",
+        category: "creative"
+      },
+      {
+        title: "Quick, Draw!",
+        emoji: "✏️",
+        description: "Google's AI experiment that challenges you to draw objects while a neural network tries to guess what you're drawing.",
+        tags: ["AI", "Google", "Drawing"],
+        link: "https://quickdraw.withgoogle.com",
+        category: "games"
+      },
+      {
+        title: "Talk to Transformer",
+        emoji: "🤖",
+        description: "GPT-2 powered text completion tool. Start typing and watch AI continue your thoughts in surprisingly coherent ways.",
+        tags: ["AI", "Text Generation", "GPT"],
+        link: "https://talktotransformer.com",
+        category: "ai-tools"
+      },
+      {
+        title: "DeepFakes Web",
+        emoji: "🎭",
+        description: "Online deepfake maker that uses AI to swap faces in videos. Create realistic face swaps with just a few clicks.",
+        tags: ["AI", "Video", "Face Swap"],
+        link: "https://deepfakesweb.com",
+        category: "experimental"
+      },
+      {
+        title: "Magenta Studio",
+        emoji: "🎵",
+        description: "Google's AI music tools that help you create music using machine learning. Generate melodies, drums, and more.",
+        tags: ["AI", "Music", "Google"],
+        link: "https://magenta.tensorflow.org/studio",
+        category: "creative"
+      },
+      {
+        title: "This Cat Does Not Exist",
+        emoji: "🐱",
+        description: "Like This Person Does Not Exist, but for cats! AI-generated feline faces that look surprisingly real.",
+        tags: ["AI", "Cats", "Neural Networks"],
+        link: "https://thiscatdoesnotexist.com",
+        category: "fun"
+      },
+      {
+        title: "Remove.bg",
+        emoji: "🖼️",
+        description: "AI-powered background removal tool. Upload any image and get a perfect cutout in seconds.",
+        tags: ["AI", "Image Processing", "Tools"],
+        link: "https://www.remove.bg",
+        category: "ai-tools"
+      },
+      {
+        title: "Akinator",
+        emoji: "🧞",
+        description: "The web genie that reads your mind! Think of a character and Akinator will guess who it is through AI-powered questions.",
+        tags: ["AI", "Game", "Mind Reading"],
+        link: "https://en.akinator.com",
+        category: "games"
+      },
+      {
+        title: "DeepL Translator",
+        emoji: "🌍",
+        description: "AI-powered translation that's often more accurate than Google Translate. Uses neural networks for natural translations.",
+        tags: ["AI", "Translation", "Language"],
+        link: "https://www.deepl.com/translator",
+        category: "ai-tools"
+      },
+      {
+        title: "Runway Green Screen",
+        emoji: "🎬",
+        description: "AI-powered green screen removal without the green screen. Remove backgrounds from videos automatically.",
+        tags: ["AI", "Video", "Background Removal"],
+        link: "https://runwayml.com/green-screen",
+        category: "creative"
+      },
+      {
+        title: "AI Weirdness",
+        emoji: "🤪",
+        description: "A blog showcasing the hilarious and bizarre results when AI tries to understand human things. Neural networks being weird.",
+        tags: ["AI", "Humor", "Blog"],
+        link: "https://aiweirdness.com",
+        category: "fun"
+      },
+      {
+        title: "Teachable Machine",
+        emoji: "🎓",
+        description: "Google's tool for training your own machine learning models. No coding required - just upload examples and train!",
+        tags: ["AI", "Machine Learning", "Education"],
+        link: "https://teachablemachine.withgoogle.com",
+        category: "ai-tools"
+      },
+      {
+        title: "DALL-E Mini",
+        emoji: "🖌️",
+        description: "Create images from text descriptions using AI. Type anything and watch the AI attempt to draw it.",
+        tags: ["AI", "Image Generation", "Text to Image"],
+        link: "https://huggingface.co/spaces/dalle-mini/dalle-mini",
+        category: "creative"
+      },
+      {
+        title: "Infinite Craft",
+        emoji: "🔥",
+        description: "A crafting game where you combine elements to create new things. Start with fire, water, earth, and wind.",
+        tags: ["Game", "Crafting", "Creative"],
+        link: "https://neal.fun/infinite-craft/",
+        category: "games"
+      },
+      {
+        title: "Pockemon",
+        emoji: "⚡",
+        description: "AI-generated Pokemon with descriptions. See what happens when neural networks try to create new Pokemon.",
+        tags: ["AI", "Pokemon", "Generation"],
+        link: "https://pockemon.com",
+        category: "fun"
+      },
+      {
+        title: "Semantic Scholar",
+        emoji: "📚",
+        description: "AI-powered academic search engine that understands scientific literature and finds relevant papers.",
+        tags: ["AI", "Research", "Academic"],
+        link: "https://www.semanticscholar.org",
+        category: "ai-tools"
+      },
+      {
+        title: "Lobe",
+        emoji: "🧠",
+        description: "Microsoft's visual tool for training machine learning models. Drag, drop, and train without writing code.",
+        tags: ["AI", "Machine Learning", "Visual"],
+        link: "https://www.lobe.ai",
+        category: "ai-tools"
+      },
+      {
+        title: "AI Dungeon 2",
+        emoji: "🗡️",
+        description: "The sequel to AI Dungeon with even more advanced AI storytelling. Create infinite adventures.",
+        tags: ["AI", "Gaming", "Story"],
+        link: "https://play.aidungeon.io",
+        category: "games"
+      },
+      {
+        title: "Waifu2x",
+        emoji: "🖼️",
+        description: "AI-powered image upscaling specifically designed for anime and artwork. Make images bigger without losing quality.",
+        tags: ["AI", "Image Processing", "Upscaling"],
+        link: "https://waifu2x.udp.jp",
+        category: "ai-tools"
+      },
+      {
+        title: "Jukebox",
+        emoji: "🎧",
+        description: "OpenAI's neural network that generates music in raw audio format. Create songs in various genres and styles.",
+        tags: ["AI", "Music", "Generation"],
+        link: "https://jukebox.openai.com",
+        category: "creative"
+      },
+      {
+        title: "This Word Does Not Exist",
+        emoji: "📝",
+        description: "AI that generates fake words that sound like they could be real. Complete with definitions and pronunciations.",
+        tags: ["AI", "Language", "Words"],
+        link: "https://www.thisworddoesnotexist.com",
+        category: "fun"
+      },
+      {
+        title: "AI Painter",
+        emoji: "🎨",
+        description: "Transform your photos into artwork using AI. Apply various artistic styles from famous painters.",
+        tags: ["AI", "Art", "Style Transfer"],
+        link: "https://aipainter.com",
+        category: "creative"
+      }
+    ];
+
+    function getFilteredProjects() {
+      if (currentCategory === 'all') {
+        return projects;
+      }
+      return projects.filter(project => project.category === currentCategory);
+    }
+
+    function displayProject(index) {
+      const filteredProjects = getFilteredProjects();
+      const project = filteredProjects[index];
+      if (!project) return;
+      const projectHtml = `
+                <div class="project-card">
+                    <div class="project-title">
+                        <span class="project-emoji">${project.emoji}</span>
+                        ${project.title}
+                        <button class="favorite-btn" onclick="toggleFavorite(${projects.indexOf(project)})" title="Add to favorites">
+                            ${favorites.includes(projects.indexOf(project)) ? '❤️' : '🤍'}
+                        </button>
+                    </div>
+                    <div class="project-description">${project.description}</div>
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <a href="${project.link}" target="_blank" class="project-link">
+                        🚀 Explore Project
+                    </a>
+                </div>
+            `;
+      const projectContainer = document.getElementById('currentProject');
+      projectContainer.innerHTML = projectHtml;
+      // Trigger animation
+      setTimeout(() => {
+        const card = projectContainer.querySelector('.project-card');
+        card.classList.add('show');
+      }, 100);
+      // Update stats
+      document.getElementById('projectCount').textContent =
+        `Project ${index + 1} of ${filteredProjects.length}`;
+    }
+
+    function stumbleToNext() {
+      showLoading();
+      setTimeout(() => {
+        const filteredProjects = getFilteredProjects();
+        const randomIndex = Math.floor(Math.random() * filteredProjects.length);
+        currentIndex = randomIndex;
+        hideLoading();
+        displayProject(currentIndex);
+      }, 1000);
+    }
+
+    function showLoading() {
+      document.getElementById('loading').style.display = 'block';
+      document.getElementById('currentProject').style.display = 'none';
+    }
+
+    function hideLoading() {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('currentProject').style.display = 'block';
+    }
+
+    function toggleFavorite(projectIndex) {
+      const index = favorites.indexOf(projectIndex);
+      if (index > -1) {
+        favorites.splice(index, 1);
+      } else {
+        favorites.push(projectIndex);
+      }
+      // Re-render to update heart icon
+      displayProject(currentIndex);
+    }
+    // Initialize
+    displayProject(currentIndex);
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>

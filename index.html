@@ -689,24 +689,16 @@
     }
 
     function stumbleToNext() {
-  showLoading();
+  showLoading(); // Shows spinner
   setTimeout(() => {
-    const filteredProjects = getFilteredProjects();
-    if (filteredProjects.length <= 1) {
-      hideLoading();
-      return displayProject(0);
-    }
-
-    let randomIndex;
-    do {
-      randomIndex = Math.floor(Math.random() * filteredProjects.length);
-    } while (randomIndex === currentIndex);
-
+    const filteredProjects = getFilteredProjects(); // Gets all projects (or filtered ones)
+    const randomIndex = Math.floor(Math.random() * filteredProjects.length); // Picks a random index
     currentIndex = randomIndex;
-    hideLoading();
-    displayProject(currentIndex);
-  }, 1000);
+    hideLoading(); // Hides spinner
+    displayProject(currentIndex); // Shows the project
+  }, 1000); // Waits 1 second for effect
 }
+
 
     function showLoading() {
       document.getElementById('loading').style.display = 'block';

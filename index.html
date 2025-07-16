@@ -419,8 +419,7 @@
         // Shuffle the projects array on load for additional randomness
         shuffleArray(projects);
         
-        // Update global stats
-        updateGlobalStats();
+    
         
         hideLoading();
         
@@ -468,12 +467,7 @@
       displayProject(currentProject);
     }
 
-    function updateGlobalStats() {
-      const globalStats = document.getElementById('globalStats');
-      const totalProjects = projects.length;
-      const categories = [...new Set(projects.map(p => p.category))];
-      globalStats.textContent = `${totalProjects} AI projects across ${categories.length} categories`;
-    }
+
 
     function showError(message) {
       const projectContainer = document.getElementById('currentProject');

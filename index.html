@@ -379,9 +379,30 @@
     let viewedProjects = new Set();
     let projects = []; // Will be loaded from external file
     let projectsLoaded = false;
+    let randomSeed = Date.now(); // Seed for randomization
 
     // Configuration - Change this URL to point to your GitHub raw file
     const PROJECTS_URL = 'https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/projects.json';
+
+    // Enhanced random function that uses time-based seed
+    function getRandomIndex(max) {
+      randomSeed = (randomSeed * 1103515245 + 12345) & 0x7fffffff;
+      return Math.floor((randomSeed / 0x7fffffff) * max);
+    }
+
+    // Alternative method using crypto API for better randomness
+    function getSecureRandomIndex(max) {
+      if (window.crypto && window.crypto.getRandomValues) {
+        const array = new Uint32Array(1);
+        window.crypto.getRandomValues(array);
+        return Math.floor((array[0] / 0xffffffff) * max);
+      } else {
+        // Fallback to enhanced Math.random with time-based variations
+        const now = Date.now();
+        const timeFactor = (now % 1000) / 1000; // Use milliseconds for variation
+        return Math.floor((Math.random() + timeFactor) % 1 * max);
+      }
+    }
 
     async function loadProjects() {
       try {
@@ -395,19 +416,56 @@
         projects = await response.json();
         projectsLoaded = true;
         
+        // Shuffle the projects array on load for additional randomness
+        shuffleArray(projects);
+        
         // Update global stats
         updateGlobalStats();
         
         hideLoading();
         
-        // Initialize with a random project after loading
-        stumbleToNext();
+        // Initialize with a truly random project after loading
+        setTimeout(() => {
+          getRandomFirstProject();
+        }, 100);
       } catch (error) {
         console.error('Error loading projects:', error);
         hideLoading();
         showError('Failed to load projects. Please check the projects URL and try again.');
         document.getElementById('globalStats').textContent = 'Failed to load projects';
       }
+    }
+
+    // Fisher-Yates shuffle algorithm for better randomization
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = getSecureRandomIndex(i + 1);
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function getRandomFirstProject() {
+      if (projects.length === 0) {
+        showError('No projects available.');
+        return;
+      }
+
+      const filteredProjects = getFilteredProjects();
+      
+      // Use multiple randomization methods for the first project
+      const method1 = getSecureRandomIndex(filteredProjects.length);
+      const method2 = Math.floor(Math.random() * filteredProjects.length);
+      const method3 = getRandomIndex(filteredProjects.length);
+      
+      // Combine different methods for maximum randomness
+      const combinedIndex = (method1 + method2 + method3) % filteredProjects.length;
+      const selectedProject = filteredProjects[combinedIndex];
+      
+      // Mark as viewed
+      viewedProjects.add(selectedProject.title);
+      currentProject = selectedProject;
+      
+      displayProject(currentProject);
     }
 
     function updateGlobalStats() {
@@ -498,13 +556,13 @@
         let selectedProject;
         
         if (unviewedProjects.length > 0) {
-          // Select from unviewed projects
-          const randomIndex = Math.floor(Math.random() * unviewedProjects.length);
+          // Select from unviewed projects using secure random
+          const randomIndex = getSecureRandomIndex(unviewedProjects.length);
           selectedProject = unviewedProjects[randomIndex];
         } else {
           // All projects have been viewed, reset and select randomly
           viewedProjects.clear();
-          const randomIndex = Math.floor(Math.random() * filteredProjects.length);
+          const randomIndex = getSecureRandomIndex(filteredProjects.length);
           selectedProject = filteredProjects[randomIndex];
         }
         

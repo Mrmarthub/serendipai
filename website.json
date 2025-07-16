@@ -1,0 +1,274 @@
+[
+  {
+    "title": "This Person Does Not Exist",
+    "emoji": "👤",
+    "description": "An AI that generates incredibly realistic faces of people who don't actually exist using StyleGAN. Each refresh creates a completely new person.",
+    "tags": ["AI", "Neural Networks", "Computer Vision"],
+    "link": "https://thispersondoesnotexist.com",
+    "category": "ai-tools"
+  },
+  {
+    "title": "AI Dungeon",
+    "emoji": "🏰",
+    "description": "An infinitely generated text adventure game powered by AI. Create any story, go anywhere, do anything in this AI-powered storytelling experience.",
+    "tags": ["AI", "Gaming", "Text Generation"],
+    "link": "https://play.aidungeon.io",
+    "category": "games"
+  },
+  {
+    "title": "Artbreeder",
+    "emoji": "🎨",
+    "description": "Collaborative AI art tool that lets you create and explore images using GANs. Mix and breed images to create endless variations.",
+    "tags": ["AI", "Art", "Creative"],
+    "link": "https://www.artbreeder.com",
+    "category": "creative"
+  },
+  {
+    "title": "RunwayML",
+    "emoji": "✨",
+    "description": "Creative AI tools for artists and creators. Generate videos, images, and audio with cutting-edge machine learning models.",
+    "tags": ["AI", "Creative", "Video"],
+    "link": "https://runwayml.com",
+    "category": "creative"
+  },
+  {
+    "title": "Quick, Draw!",
+    "emoji": "✏️",
+    "description": "Google's AI experiment that challenges you to draw objects while a neural network tries to guess what you're drawing.",
+    "tags": ["AI", "Google", "Drawing"],
+    "link": "https://quickdraw.withgoogle.com",
+    "category": "games"
+  },
+  {
+    "title": "Talk to Transformer",
+    "emoji": "🤖",
+    "description": "GPT-2 powered text completion tool. Start typing and watch AI continue your thoughts in surprisingly coherent ways.",
+    "tags": ["AI", "Text Generation", "GPT"],
+    "link": "https://talktotransformer.com",
+    "category": "ai-tools"
+  },
+  {
+    "title": "DeepFakes Web",
+    "emoji": "🎭",
+    "description": "Online deepfake maker that uses AI to swap faces in videos. Create realistic face swaps with just a few clicks.",
+    "tags": ["AI", "Video", "Face Swap"],
+    "link": "https://deepfakesweb.com",
+    "category": "experimental"
+  },
+  {
+    "title": "Magenta Studio",
+    "emoji": "🎵",
+    "description": "Google's AI music tools that help you create music using machine learning. Generate melodies, drums, and more.",
+    "tags": ["AI", "Music", "Google"],
+    "link": "https://magenta.tensorflow.org/studio",
+    "category": "creative"
+  },
+  {
+    "title": "This Cat Does Not Exist",
+    "emoji": "🐱",
+    "description": "Like This Person Does Not Exist, but for cats! AI-generated feline faces that look surprisingly real.",
+    "tags": ["AI", "Cats", "Neural Networks"],
+    "link": "https://thiscatdoesnotexist.com",
+    "category": "fun"
+  },
+  {
+    "title": "Remove.bg",
+    "emoji": "🖼️",
+    "description": "AI-powered background removal tool. Upload any image and get a perfect cutout in seconds.",
+    "tags": ["AI", "Image Processing", "Tools"],
+    "link": "https://www.remove.bg",
+    "category": "ai-tools"
+  },
+  {
+    "title": "Akinator",
+    "emoji": "🧞",
+    "description": "The web genie that reads your mind! Think of a character and Akinator will guess who it is through AI-powered questions.",
+    "tags": ["AI", "Game", "Mind Reading"],
+    "link": "https://en.akinator.com",
+    "category": "games"
+  },
+  {
+    "title": "DeepL Translator",
+    "emoji": "🌍",
+    "description": "AI-powered translation that's often more accurate than Google Translate. Uses neural networks for natural translations.",
+    "tags": ["AI", "Translation", "Language"],
+    "link": "https://www.deepl.com/translator",
+    "category": "ai-tools"
+  },
+  {
+    "title": "Runway Green Screen",
+    "emoji": "🎬",
+    "description": "AI-powered green screen removal without the green screen. Remove backgrounds from videos automatically.",
+    "tags": ["AI", "Video", "Background Removal"],
+    "link": "https://runwayml.com/green-screen",
+    "category": "creative"
+  },
+  {
+    "title": "AI Weirdness",
+    "emoji": "🤪",
+    "description": "A blog showcasing the hilarious and bizarre results when AI tries to understand human things. Neural networks being weird.",
+    "tags": ["AI", "Humor", "Blog"],
+    "link": "https://aiweirdness.com",
+    "category": "fun"
+  },
+  {
+    "title": "Teachable Machine",
+    "emoji": "🎓",
+    "description": "Google's tool for training your own machine learning models. No coding required - just upload examples and train!",
+    "tags": ["AI", "Machine Learning", "Education"],
+    "link": "https://teachablemachine.withgoogle.com",
+    "category": "ai-tools"
+  },
+  {
+    "title": "DALL-E Mini",
+    "emoji": "🖌️",
+    "description": "Create images from text descriptions using AI. Type anything and watch the AI attempt to draw it.",
+    "tags": ["AI", "Image Generation", "Text to Image"],
+    "link": "https://huggingface.co/spaces/dalle-mini/dalle-mini",
+    "category": "creative"
+  },
+  {
+    "title": "Infinite Craft",
+    "emoji": "🔥",
+    "description": "A crafting game where you combine elements to create new things. Start with fire, water, earth, and wind.",
+    "tags": ["Game", "Crafting", "Creative"],
+    "link": "https://neal.fun/infinite-craft/",
+    "category": "games"
+  },
+  {
+    "title": "Pockemon",
+    "emoji": "⚡",
+    "description": "AI-generated Pokemon with descriptions. See what happens when neural networks try to create new Pokemon.",
+    "tags": ["AI", "Pokemon", "Generation"],
+    "link": "https://pockemon.com",
+    "category": "fun"
+  },
+  {
+    "title": "Semantic Scholar",
+    "emoji": "📚",
+    "description": "AI-powered academic search engine that understands scientific literature and finds relevant papers.",
+    "tags": ["AI", "Research", "Academic"],
+    "link": "https://www.semanticscholar.org",
+    "category": "ai-tools"
+  },
+  {
+    "title": "Lobe",
+    "emoji": "🧠",
+    "description": "Microsoft's visual tool for training machine learning models. Drag, drop, and train without writing code.",
+    "tags": ["AI", "Machine Learning", "Visual"],
+    "link": "https://www.lobe.ai",
+    "category": "ai-tools"
+  },
+  {
+    "title": "Waifu2x",
+    "emoji": "🖼️",
+    "description": "AI-powered image upscaling specifically designed for anime and artwork. Make images bigger without losing quality.",
+    "tags": ["AI", "Image Processing", "Upscaling"],
+    "link": "https://waifu2x.udp.jp",
+    "category": "ai-tools"
+  },
+  {
+    "title": "Jukebox",
+    "emoji": "🎧",
+    "description": "OpenAI's neural network that generates music in raw audio format. Create songs in various genres and styles.",
+    "tags": ["AI", "Music", "Generation"],
+    "link": "https://jukebox.openai.com",
+    "category": "creative"
+  },
+  {
+    "title": "This Word Does Not Exist",
+    "emoji": "📝",
+    "description": "AI that generates fake words that sound like they could be real. Complete with definitions and pronunciations.",
+    "tags": ["AI", "Language", "Words"],
+    "link": "https://www.thisworddoesnotexist.com",
+    "category": "fun"
+  },
+  {
+    "title": "AI Painter",
+    "emoji": "🎨",
+    "description": "Transform your photos into artwork using AI. Apply various artistic styles from famous painters.",
+    "tags": ["AI", "Art", "Style Transfer"],
+    "link": "https://aipainter.com",
+    "category": "creative"
+  },
+  {
+    "title": "Dream Interpreter AI",
+    "emoji": "🌙",
+    "description": "Type your dream and let the AI give you a surreal and poetic interpretation. It blends psychology, symbolism, and a bit of absurdity.",
+    "tags": ["AI", "Dreams", "Creative"],
+    "link": "https://dreaminterpreter.ai",
+    "category": "fun"
+  },
+  {
+    "title": "RoboPoet",
+    "emoji": "📝",
+    "description": "Generate poems in various styles and moods using AI. Romantic sonnet or post-apocalyptic haiku? Your robot muse awaits.",
+    "tags": ["AI", "Poetry", "Creative Writing"],
+    "link": "https://robopoet.com",
+    "category": "creative"
+  },
+  {
+    "title": "This Resume Does Not Exist",
+    "emoji": "📄",
+    "description": "A surreal AI experiment generating fake resumes with uncanny names, job titles, and skills.",
+    "tags": ["AI", "Humor", "Text Generation"],
+    "link": "https://thisresumedoesnotexist.com",
+    "category": "fun"
+  },
+  {
+    "title": "Latent Space Explorer",
+    "emoji": "🌀",
+    "description": "Visually navigate the 'latent space' of GANs to discover strange and beautiful in-between images.",
+    "tags": ["AI", "GAN", "Exploration"],
+    "link": "https://latentspaceexplorer.com",
+    "category": "experimental"
+  },
+  {
+    "title": "AI Roguelite",
+    "emoji": "🗺️",
+    "description": "An AI-generated dungeon crawler where the levels, monsters, and items are created on the fly as you play.",
+    "tags": ["AI", "Gaming", "Procedural Generation"],
+    "link": "https://airoguelite.com",
+    "category": "games"
+  },
+  {
+    "title": "This Startup Does Not Exist",
+    "emoji": "🚀",
+    "description": "Discover hilarious and oddly plausible fake startups with generated names, taglines, and business models.",
+    "tags": ["AI", "Humor", "Entrepreneurship"],
+    "link": "https://thisstartupdoesnotexist.com",
+    "category": "fun"
+  },
+  {
+    "title": "Deep Nostalgia",
+    "emoji": "📸",
+    "description": "Bring old photos to life. AI animates faces in historical pictures to create realistic blinking and smiling.",
+    "tags": ["AI", "Animation", "Photos"],
+    "link": "https://www.myheritage.com/deep-nostalgia",
+    "category": "ai-tools"
+  },
+  {
+    "title": "AI Comic Factory",
+    "emoji": "📚",
+    "description": "Write your own comic script and have AI generate a comic strip based on it — characters, dialogue, and panels included.",
+    "tags": ["AI", "Comics", "Creative"],
+    "link": "https://app.aicomicfactory.com",
+    "category": "creative"
+  },
+  {
+    "title": "SongR",
+    "emoji": "🎤",
+    "description": "Describe a mood or story and let AI generate song lyrics for you — complete with rhymes and chorus.",
+    "tags": ["AI", "Music", "Lyrics"],
+    "link": "https://songr.ai",
+    "category": "creative"
+  },
+  {
+    "title": "Chirp AI",
+    "emoji": "🐦",
+    "description": "Enter a topic and this AI writes eerily accurate fake tweets in the style of famous personalities.",
+    "tags": ["AI", "Social Media", "Impersonation"],
+    "link": "https://chirp.ai",
+    "category": "fun"
+  }
+]

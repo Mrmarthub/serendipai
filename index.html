@@ -357,6 +357,9 @@
     <div class="header">
       <h1>█ Serendip.AI █</h1>
       <p>// DISCOVER AMAZING AI PROJECTS //</p>
+      <div class="stats" id="globalStats" style="margin-bottom: 20px; font-size: 1rem;">
+        Loading projects...
+      </div>
       <button class="stumble-button" onclick="stumbleToNext()" id="stumbleBtn">>> STUMBLE! << </button>
     </div>
 
@@ -378,7 +381,7 @@
     let projectsLoaded = false;
 
     // Configuration - Change this URL to point to your GitHub raw file
-    const PROJECTS_URL = 'https://raw.githubusercontent.com/Mrmarthub/serendipai/main/website.json';
+    const PROJECTS_URL = 'https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/projects.json';
 
     async function loadProjects() {
       try {
@@ -391,6 +394,10 @@
         
         projects = await response.json();
         projectsLoaded = true;
+        
+        // Update global stats
+        updateGlobalStats();
+        
         hideLoading();
         
         // Initialize with a random project after loading
@@ -399,7 +406,15 @@
         console.error('Error loading projects:', error);
         hideLoading();
         showError('Failed to load projects. Please check the projects URL and try again.');
+        document.getElementById('globalStats').textContent = 'Failed to load projects';
       }
+    }
+
+    function updateGlobalStats() {
+      const globalStats = document.getElementById('globalStats');
+      const totalProjects = projects.length;
+      const categories = [...new Set(projects.map(p => p.category))];
+      globalStats.textContent = `${totalProjects} AI projects across ${categories.length} categories`;
     }
 
     function showError(message) {
@@ -443,7 +458,7 @@
           </a>
         </div>
         <div class="stats">
-          ${remainingCount > 0 ? `${remainingCount} new projects remaining` : 'All projects viewed! Next click will reset.'}
+          Project ${viewedProjects.size} of ${filteredProjects.length} | ${remainingCount > 0 ? `${remainingCount} new projects remaining` : 'All projects viewed! Next click will reset.'}
         </div>
       `;
       

@@ -557,94 +557,14 @@
         link: "https://www.thisworddoesnotexist.com",
         category: "fun"
       },
- {
-    "title": "Dream Interpreter AI",
-    "emoji": "🌙",
-    "description": "Type your dream and let the AI give you a surreal and poetic interpretation. It blends psychology, symbolism, and a bit of absurdity.",
-    "tags": ["AI", "Dreams", "Creative"],
-    "link": "https://dreaminterpreter.ai",
-    "category": "fun"
-  },
-  {
-    "title": "RoboPoet",
-    "emoji": "📝",
-    "description": "Generate poems in various styles and moods using AI. Romantic sonnet or post-apocalyptic haiku? Your robot muse awaits.",
-    "tags": ["AI", "Poetry", "Creative Writing"],
-    "link": "https://robopoet.com",
-    "category": "creative"
-  },
-  {
-    "title": "This Resume Does Not Exist",
-    "emoji": "📄",
-    "description": "A surreal AI experiment generating fake resumes with uncanny names, job titles, and skills.",
-    "tags": ["AI", "Humor", "Text Generation"],
-    "link": "https://thisresumedoesnotexist.com",
-    "category": "fun"
-  },
-  {
-    "title": "Latent Space Explorer",
-    "emoji": "🌀",
-    "description": "Visually navigate the 'latent space' of GANs to discover strange and beautiful in-between images.",
-    "tags": ["AI", "GAN", "Exploration"],
-    "link": "https://latentspaceexplorer.com",
-    "category": "experimental"
-  },
-  {
-    "title": "AI Roguelite",
-    "emoji": "🗺️",
-    "description": "An AI-generated dungeon crawler where the levels, monsters, and items are created on the fly as you play.",
-    "tags": ["AI", "Gaming", "Procedural Generation"],
-    "link": "https://airoguelite.com",
-    "category": "games"
-  },
-  {
-    "title": "This Startup Does Not Exist",
-    "emoji": "🚀",
-    "description": "Discover hilarious and oddly plausible fake startups with generated names, taglines, and business models.",
-    "tags": ["AI", "Humor", "Entrepreneurship"],
-    "link": "https://thisstartupdoesnotexist.com",
-    "category": "fun"
-  },
-  {
-    "title": "Deep Nostalgia",
-    "emoji": "📸",
-    "description": "Bring old photos to life. AI animates faces in historical pictures to create realistic blinking and smiling.",
-    "tags": ["AI", "Animation", "Photos"],
-    "link": "https://www.myheritage.com/deep-nostalgia",
-    "category": "ai-tools"
-  },
-  {
-    "title": "AI Comic Factory",
-    "emoji": "📚",
-    "description": "Write your own comic script and have AI generate a comic strip based on it — characters, dialogue, and panels included.",
-    "tags": ["AI", "Comics", "Creative"],
-    "link": "https://app.aicomicfactory.com",
-    "category": "creative"
-  },
-  {
-    "title": "SongR",
-    "emoji": "🎤",
-    "description": "Describe a mood or story and let AI generate song lyrics for you — complete with rhymes and chorus.",
-    "tags": ["AI", "Music", "Lyrics"],
-    "link": "https://songr.ai",
-    "category": "creative"
-  },
-  {
-    "title": "Chirp AI",
-    "emoji": "🐦",
-    "description": "Enter a topic and this AI writes eerily accurate fake tweets in the style of famous personalities.",
-    "tags": ["AI", "Social Media", "Impersonation"],
-    "link": "https://chirp.ai",
-    "category": "fun"
-  }
-     {
-    "title": "Dream Interpreter AI",
-    "emoji": "🌙",
-    "description": "Type your dream and let the AI give you a surreal and poetic interpretation. It blends psychology, symbolism, and a bit of absurdity.",
-    "tags": ["AI", "Dreams", "Creative"],
-    "link": "https://dreaminterpreter.ai",
-    "category": "fun"
-  }
+      {
+        title: "AI Painter",
+        emoji: "🎨",
+        description: "Transform your photos into artwork using AI. Apply various artistic styles from famous painters.",
+        tags: ["AI", "Art", "Style Transfer"],
+        link: "https://aipainter.com",
+        category: "creative"
+      }
     ];
 
     function getFilteredProjects() {
@@ -689,16 +609,15 @@
     }
 
     function stumbleToNext() {
-  showLoading(); // Shows spinner
-  setTimeout(() => {
-    const filteredProjects = getFilteredProjects(); // Gets all projects (or filtered ones)
-    const randomIndex = Math.floor(Math.random() * filteredProjects.length); // Picks a random index
-    currentIndex = randomIndex;
-    hideLoading(); // Hides spinner
-    displayProject(currentIndex); // Shows the project
-  }, 1000); // Waits 1 second for effect
-}
-
+      showLoading();
+      setTimeout(() => {
+        const filteredProjects = getFilteredProjects();
+        const randomIndex = Math.floor(Math.random() * filteredProjects.length);
+        currentIndex = randomIndex;
+        hideLoading();
+        displayProject(currentIndex);
+      }, 1000);
+    }
 
     function showLoading() {
       document.getElementById('loading').style.display = 'block';

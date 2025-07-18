@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serendip.AI Admin Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(120, 120, 120, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(120, 120, 120, 0.1) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .login-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: -20px;
+        }
+
+        .login-box {
+            background: #fff;
+            color: #000;
+            padding: 40px;
+            border: 4px solid #000;
+            box-shadow: 8px 8px 0px #000;
+            text-align: center;
+            min-width: 400px;
+        }
+
+        .login-box h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 15px;
+        }
+
+        .github-config {
+            background: #fff;
+            color: #000;
+            padding: 30px;
+            border: 4px solid #000;
+            box-shadow: 8px 8px 0px #000;
+            margin-bottom: 30px;
+        }
+
+        .github-config h2 {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .config-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px #000;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #dc3545;
+            color: #fff;
+            border: 2px solid #dc3545;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .admin-panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .form-section {
+            background: #fff;
+            color: #000;
+            padding: 30px;
+            border: 4px solid #000;
+            box-shadow: 8px 8px 0px #000;
+        }
+
+        .form-section h2 {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #000;
+            background: #fff;
+            color: #000;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .btn {
+            background: #000;
+            color: #fff;
+            border: 2px solid #000;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Courier New', monospace;
+            box-shadow: 4px 4px 0px #000;
+            transition: all 0.2s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #000;
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #000;
+        }
+
+        .btn-success {
+            background: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-warning {
+            background: #ffc107;
+            border-color: #ffc107;
+            color: #000;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .tags-input {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .tag-item {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .tag-remove {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .projects-list {
+            background: #fff;
+            color: #000;
+            padding: 30px;
+            border: 4px solid #000;
+            box-shadow: 8px 8px 0px #000;
+            margin-top: 30px;
+        }
+
+        .project-item {
+            border: 2px solid #000;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-info {
+            flex: 1;
+        }
+
+        .project-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .project-category {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: #fff;
+            padding: 15px 20px;
+            border: 2px solid #fff;
+            box-shadow: 4px 4px 0px #000;
+            z-index: 1000;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            max-width: 300px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.error {
+            background: #dc3545;
+        }
+
+        .notification.warning {
+            background: #ffc107;
+            color: #000;
+        }
+
+        .emoji-picker {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 5px;
+            margin-top: 10px;
+            padding: 10px;
+            border: 2px solid #000;
+            background: #f8f9fa;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .emoji-option {
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            transition: all 0.2s ease;
+        }
+
+        .emoji-option:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .status-indicator {
+            padding: 5px 10px;
+            border: 2px solid #000;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .status-connected {
+            background: #28a745;
+            color: #fff;
+        }
+
+        .status-disconnected {
+            background: #dc3545;
+            color: #fff;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .admin-panel, .config-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .login-box {
+                min-width: 300px;
+                margin: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-box">
+            <h1>█ ADMIN ACCESS █</h1>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter admin password">
+            </div>
+            <button type="button" onclick="login()" class="btn btn-success">LOGIN</button>
+            <div style="margin-top: 20px; font-size: 12px; color: #666;">
+                Default password: admin123<br>
+                Change this in the script section
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Admin Panel -->
+    <div id="adminPanel" class="container" style="display: none;">
+        <button class="logout-btn" onclick="logout()">LOGOUT</button>
+        
+        <div class="header">
+            <h1>█ Serendip.AI Admin █</h1>
+            <p>// MANAGE YOUR AI PROJECTS //</p>
+        </div>
+
+        <!-- GitHub Configuration -->
+        <div class="github-config">
+            <h2>GitHub Configuration</h2>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label for="githubToken">GitHub Personal Access Token</label>
+                    <input type="password" id="githubToken" placeholder="ghp_...">
+                    <small>Need read/write access to your repository</small>
+                </div>
+                <div class="form-group">
+                    <label for="githubRepo">Repository (owner/repo)</label>
+                    <input type="text" id="githubRepo" placeholder="username/serendipai">
+                </div>
+                <div class="form-group">
+                    <label for="githubFile">JSON File Path</label>
+                    <input type="text" id="githubFile" value="website.json">
+                </div>
+                <div class="form-group">
+                    <label for="githubBranch">Branch</label>
+                    <input type="text" id="githubBranch" value="main">
+                </div>
+            </div>
+            <div class="status-indicator" id="githubStatus">
+                <span class="status-disconnected">GitHub: Not Connected</span>
+            </div>
+            <button type="button" onclick="connectGitHub()" class="btn btn-warning">Connect & Load Projects</button>
+            <button type="button" onclick="saveToGitHub()" class="btn btn-success" id="saveBtn" disabled>Save to GitHub</button>
+        </div>
+
+        <div class="admin-panel">
+            <div class="form-section">
+                <h2>Add New Project</h2>
+                <form id="projectForm">
+                    <div class="form-group">
+                        <label for="title">Project Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="link">Project Link</label>
+                        <input type="url" id="link" name="link" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="ml">Machine Learning</option>
+                            <option value="nlp">Natural Language Processing</option>
+                            <option value="vision">Computer Vision</option>
+                            <option value="audio">Audio/Speech</option>
+                            <option value="creative">Creative AI</option>
+                            <option value="tools">AI Tools</option>
+                            <option value="research">Research</option>
+                            <option value="games">AI Games</option>
+                            <option value="robotics">Robotics</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emoji">Emoji</label>
+                        <input type="text" id="emoji" name="emoji" placeholder="🤖" maxlength="2">
+                        <button type="button" onclick="toggleEmojiPicker()" class="btn" style="margin-top: 10px;">Pick Emoji</button>
+                        <div id="emojiPicker" class="emoji-picker" style="display: none;"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newTag">Tags</label>
+                        <input type="text" id="newTag" placeholder="Add tag and press Enter">
+                        <div id="tagsList" class="tags-input"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Add Project</button>
+                    <button type="button" onclick="clearForm()" class="btn btn-danger">Clear Form</button>
+                </form>
+            </div>
+
+            <div class="form-section">
+                <h2>Project Statistics</h2>
+                <div class="form-group">
+                    <label>Total Projects: <span id="projectCount">0</span></label>
+                </div>
+                <div class="form-group">
+                    <label>Last Sync: <span id="lastSync">Never</span></label>
+                </div>
+                <div class="form-group">
+                    <button type="button" onclick="refreshFromGitHub()" class="btn">Refresh from GitHub</button>
+                    <button type="button" onclick="clearAllProjects()" class="btn btn-danger">Clear All</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-list">
+            <h2>Current Projects</h2>
+            <div id="projectsList"></div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script>
+        // Configuration
+        const ADMIN_PASSWORD = 'admin123'; // Change this to your secure password
+        let projects = [];
+        let currentTags = [];
+        let githubConfig = {
+            token: '',
+            repo: '',
+            file: 'website.json',
+            branch: 'main'
+        };
+        let currentFileSha = null;
+
+        const commonEmojis = ['🤖', '🧠', '👁️', '🎨', '🔧', '🔬', '🎮', '📊', '💡', '⚡', '🌟', '🚀', '🎯', '🎪', '🎭', '🎨', '🎵', '🎬', '📱', '💻', '🖥️', '⌨️', '🖱️', '📡', '🔋', '⚙️', '🛠️', '🔩', '🗂️', '📁', '📊', '📈', '📉', '🔍', '🔎', '🎲'];
+
+        // Login functionality
+        function login() {
+            const password = document.getElementById('password').value;
+            if (password === ADMIN_PASSWORD) {
+                document.getElementById('loginScreen').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+                showNotification('Welcome to Serendip.AI Admin!');
+                loadSavedConfig();
+            } else {
+                showNotification('Invalid password!', 'error');
+            }
+        }
+
+        function logout() {
+            document.getElementById('loginScreen').style.display = 'flex';
+            document.getElementById('adminPanel').style.display = 'none';
+            document.getElementById('password').value = '';
+        }
+
+        // GitHub API functions
+        async function connectGitHub() {
+            const token = document.getElementById('githubToken').value;
+            const repo = document.getElementById('githubRepo').value;
+            const file = document.getElementById('githubFile').value;
+            const branch = document.getElementById('githubBranch').value;
+
+            if (!token || !repo) {
+                showNotification('Please provide GitHub token and repository!', 'error');
+                return;
+            }
+
+            githubConfig = { token, repo, file, branch };
+            saveConfig();
+
+            try {
+                showNotification('Connecting to GitHub...', 'warning');
+                await loadProjectsFromGitHub();
+                document.getElementById('githubStatus').innerHTML = '<span class="status-connected">GitHub: Connected</span>';
+                document.getElementById('saveBtn').disabled = false;
+                showNotification('Connected to GitHub successfully!');
+            } catch (error) {
+                console.error('GitHub connection error:', error);
+                showNotification('Failed to connect to GitHub: ' + error.message, 'error');
+                document.getElementById('githubStatus').innerHTML = '<span class="status-disconnected">GitHub: Connection Failed</span>';
+            }
+        }
+
+        async function loadProjectsFromGitHub() {
+            const response = await fetch(`https://api.github.com/repos/${githubConfig.repo}/contents/${githubConfig.file}?ref=${githubConfig.branch}`, {
+                headers: {
+                    'Authorization': `token ${githubConfig.token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                currentFileSha = data.sha;
+                const content = atob(data.content);
+                projects = JSON.parse(content);
+                updateProjectsList();
+                updateProjectCount();
+                updateLastSync();
+                showNotification('Projects loaded from GitHub!');
+            } else if (response.status === 404) {
+                // File doesn't exist, create empty array
+                projects = [];
+                currentFileSha = null;
+                showNotification('JSON file not found. Will create new one on first save.', 'warning');
+            } else {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+        }
+
+        async function saveToGitHub() {
+            if (!githubConfig.token || !githubConfig.repo) {
+                showNotification('GitHub not configured!', 'error');
+                return;
+            }
+
+            try {
+                const saveBtn = document.getElementById('saveBtn');
+                saveBtn.disabled = true;
+                saveBtn.innerHTML = '<span class="loading"></span>Saving...';
+
+                const content = btoa(JSON.stringify(projects, null, 2));
+                const body = {
+                    message: `Update projects: ${projects.length} total projects`,
+                    content: content,
+                    branch: githubConfig.branch
+                };
+
+                if (currentFileSha) {
+                    body.sha = currentFileSha;
+                }
+
+                const response = await fetch(`https://api.github.com/repos/${githubConfig.repo}/contents/${githubConfig.file}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${githubConfig.token}`,
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(body)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    currentFileSha = data.content.sha;
+                    updateLastSync();
+                    showNotification('Projects saved to GitHub successfully!');
+                } else {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+            } catch (error) {
+                console.error('Save error:', error);
+                showNotification('Failed to save to GitHub: ' + error.message, 'error');
+            } finally {
+                const saveBtn = document.getElementById('saveBtn');
+                saveBtn.disabled = false;
+                saveBtn.innerHTML = 'Save to GitHub';
+            }
+        }
+
+        async function refreshFromGitHub() {
+            try {
+                await loadProjectsFromGitHub();
+            } catch (error) {
+                showNotification('Failed to refresh from GitHub: ' + error.message, 'error');
+            }
+        }
+
+        // Local storage for configuration
+        function saveConfig() {
+            const config = {
+                token: githubConfig.token,
+                repo: githubConfig.repo,
+                file: githubConfig.file,
+                branch: githubConfig.branch
+            };
+            localStorage.setItem('serendip_github_config', JSON.stringify(config));
+        }
+
+        function loadSavedConfig() {
+            const saved = localStorage.getItem('serendip_github_config');
+            if (saved) {
+                const config = JSON.parse(saved);
+                document.getElementById('githubToken').value = config.token || '';
+                document.getElementById('githubRepo').value = config.repo || '';
+                document.getElementById('githubFile').value = config.file || 'website.json';
+                document.getElementById('githubBranch').value = config.branch || 'main';
+            }
+        }
+
+        // UI Helper functions
+        function initializeEmojiPicker() {
+            const emojiPicker = document.getElementById('emojiPicker');
+            emojiPicker.innerHTML = commonEmojis.map(emoji => 
+                `<div class="emoji-option" onclick="selectEmoji('${emoji}')">${emoji}</div>`
+            ).join('');
+        }
+
+        function toggleEmojiPicker() {
+            const picker = document.getElementById('emojiPicker');
+            picker.style.display = picker.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function selectEmoji(emoji) {
+            document.getElementById('emoji').value = emoji;
+            document.getElementById('emojiPicker').style.display = 'none';
+        }
+
+        function handleTagInput() {
+            const tagInput = document.getElementById('newTag');
+            tagInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    const tagValue = this.value.trim();
+                    if (tagValue && !currentTags.includes(tagValue)) {
+                        currentTags.push(tagValue);
+                        updateTagsDisplay();
+                        this.value = '';
+                    }
+                }
+            });
+        }
+
+        function updateTagsDisplay() {
+            const tagsList = document.getElementById('tagsList');
+            tagsList.innerHTML = currentTags.map(tag => 
+                `<div class="tag-item">
+                    ${tag}
+                    <button type="button" class="tag-remove" onclick="removeTag('${tag}')">×</button>
+                </div>`
+            ).join('');
+        }
+
+        function removeTag(tagToRemove) {
+            currentTags = currentTags.filter(tag => tag !== tagToRemove);
+            updateTagsDisplay();
+        }
+
+        function clearForm() {
+            document.getElementById('projectForm').reset();
+            currentTags = [];
+            updateTagsDisplay();
+        }
+
+        function addProject(projectData) {
+            projects.push(projectData);
+            updateProjectsList();
+            updateProjectCount();
+            showNotification('Project added! Remember to save to GitHub.');
+        }
+
+        function removeProject(index) {
+            if (confirm('Are you sure you want to remove this project?')) {
+                projects.splice(index, 1);
+                updateProjectsList();
+                updateProjectCount();
+                showNotification('Project removed! Remember to save to GitHub.');
+            }
+        }
+
+        function updateProjectsList() {
+            const projectsList = document.getElementById('projectsList');
+            if (projects.length === 0) {
+                projectsList.innerHTML = '<p>No projects added yet.</p>';
+                return;
+            }
+
+            projectsList.innerHTML = projects.map((project, index) => 
+                `<div class="project-item">
+                    <div class="project-info">
+                        <div class="project-title">${project.emoji} ${project.title}</div>
+                        <div class="project-category">${project.category}</div>
+                        <div style="margin-top: 5px;">
+                            ${project.tags.map(tag => `<span style="background: #000; color: #fff; padding: 2px 6px; margin-right: 5px; font-size: 10px;">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                    <button type="button" onclick="removeProject(${index})" class="btn btn-danger" style="font-size: 12px;">Remove</button>
+                </div>`
+            ).join('');
+        }
+
+        function updateProjectCount() {
+            document.getElementById('projectCount').textContent = projects.length;
+        }
+
+        function updateLastSync() {
+            document.getElementById('lastSync').textContent = new Date().toLocaleString();
+        }
+
+        function clearAllProjects() {
+            if (confirm('Are you sure you want to clear all projects? This action cannot be undone.')) {
+                projects = [];
+                updateProjectsList();
+                updateProjectCount();
+                showNotification('All projects cleared! Remember to save to GitHub.');
+            }
+        }
+
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 4000);
+        }
+
+        // Form submission handler
+        document.getElementById('projectForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const projectData = {
+                title: formData.get('title'),
+                description: formData.get('description'),
+                link: formData.get('link'),
+                category: formData.get('category'),
+                emoji: formData.get('emoji') || '🤖',
+                tags: [...currentTags]
+            };
+
+            addProject(projectData);
+            clearForm();
+        });
+
+        // Password field Enter key
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                login();
+            }
+        });
+
+        // Initialize
+        window.addEventListener('load', function() {
+            initializeEmojiPicker();
+            handleTagInput();
+            updateProjectCount();
+        });
+    </script>
+</body>
+</html>

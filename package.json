@@ -16,8 +16,8 @@
     "url": "https://github.com/Mrmarthub/serendipai/issues"
   },
   "homepage": "https://github.com/Mrmarthub/serendipai#readme",
-  "description": "",
   "dependencies": {
     "@octokit/rest": "^22.0.0"
-  }
+  },
+  "description": ""
 }

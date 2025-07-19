@@ -205,18 +205,6 @@
     "category": "games"
   },
   {
-    "title": "Pockemon",
-    "emoji": "⚡",
-    "description": "AI-generated Pokemon with descriptions. See what happens when neural networks try to create new Pokemon.",
-    "tags": [
-      "AI",
-      "Pokemon",
-      "Generation"
-    ],
-    "link": "https://pockemon.com",
-    "category": "fun"
-  },
-  {
     "title": "Semantic Scholar",
     "emoji": "📚",
     "description": "AI-powered academic search engine that understands scientific literature and finds relevant papers.",
@@ -301,18 +289,6 @@
     "category": "fun"
   },
   {
-    "title": "RoboPoet",
-    "emoji": "📝",
-    "description": "Generate poems in various styles and moods using AI. Romantic sonnet or post-apocalyptic haiku? Your robot muse awaits.",
-    "tags": [
-      "AI",
-      "Poetry",
-      "Creative Writing"
-    ],
-    "link": "https://robopoet.com",
-    "category": "creative"
-  },
-  {
     "title": "This Resume Does Not Exist",
     "emoji": "📄",
     "description": "A surreal AI experiment generating fake resumes with uncanny names, job titles, and skills.",
@@ -373,18 +349,6 @@
     "category": "creative"
   },
   {
-    "title": "Chirp AI",
-    "emoji": "🐦",
-    "description": "Enter a topic and this AI writes eerily accurate fake tweets in the style of famous personalities.",
-    "tags": [
-      "AI",
-      "Social Media",
-      "Impersonation"
-    ],
-    "link": "https://chirp.ai",
-    "category": "fun"
-  },
-  {
     "title": "AttnGAN",
     "emoji": "🧠",
     "description": "Text-to-image generative model that visualizes your descriptions—results can be beautiful or bizarre.",
@@ -394,18 +358,6 @@
       "GAN"
     ],
     "link": "https://github.com/taoxugit/AttnGAN",
-    "category": "creative"
-  },
-  {
-    "title": "Pix2pix",
-    "emoji": "🖼️",
-    "description": "Draw a sketch and the AI transforms it into a photo‑realistic image.",
-    "tags": [
-      "AI",
-      "Sketch",
-      "Image Generation"
-    ],
-    "link": "https://affinelayer.com/pixsrv/",
     "category": "creative"
   },
   {
@@ -1270,6 +1222,16 @@
       "AI",
       "VIDEO",
       "DEEPFAKE"
+    ]
+  },
+  {
+    "title": "AI Pokemon Generator",
+    "description": "AI-generated Pokemon with descriptions. See what happens when neural networks try to create new Pokemon.",
+    "link": "https://perchance.org/ai-pokemon-generator",
+    "category": "creative",
+    "emoji": "🙈",
+    "tags": [
+      "Pokemon"
     ]
   }
 ]

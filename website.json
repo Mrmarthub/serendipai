@@ -481,18 +481,6 @@
     "category": "creative"
   },
   {
-    "title": "Talking Tours",
-    "emoji": "🗺️",
-    "description": "Explore Street View landmarks narrated by AI in this immersive Google Arts & Culture demo.",
-    "tags": [
-      "AI",
-      "Audio",
-      "Tour"
-    ],
-    "link": "https://labs.google/experiments/talking-tours",
-    "category": "education"
-  },
-  {
     "title": "Google AI Experiments",
     "emoji": "🤹",
     "description": "A sandbox of playful, lightweight AI experiments: grammar tools, games, music, drawing bots.",
@@ -1221,5 +1209,13 @@
     "tags": [
       "Pokemon"
     ]
+  },
+  {
+    "title": "Talking Tours",
+    "description": "Explore Street View landmarks narrated by AI in this immersive Google Arts & Culture demo.\n",
+    "link": "https://artsandculture.google.com/experiment/talking-tours/8AGlfzgsYmBeIA?hl=en",
+    "category": "creative",
+    "emoji": "✈️",
+    "tags": []
   }
 ]

@@ -1307,5 +1307,17 @@
     ],
     "link": "https://postmodernismgenerator.com",
     "category": "fun"
+  },
+  {
+    "title": "Test",
+    "description": "test",
+    "link": "http://wwww.test.com",
+    "category": "vision",
+    "emoji": "🤖",
+    "tags": [
+      "fsf",
+      "dfdfd",
+      "dfdf"
+    ]
   }
 ]

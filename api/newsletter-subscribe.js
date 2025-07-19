@@ -1,9 +1,9 @@
 import { Octokit } from 'octokit';
 
 const githubConfig = {
-  token: process.env.GITHUB_TOKEN, // stored in Vercel Project → Environment Variables
-  repo: 'Mrmarthub/serendipai',     // replace with your actual repo
-  file: 'subscribers.json',         // stored at root
+  token: process.env.GITHUB_TOKEN, // set this in Vercel project env vars
+  repo: 'Mrmarthub/serendipai',     // replace with your GitHub repo
+  file: 'subscribers.json',
   branch: 'main'
 };
 
@@ -12,8 +12,9 @@ const octokit = new Octokit({
 });
 
 export default async function handler(req, res) {
-  // CORS header
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // ✅ CORS Headers
+  res.setHeader('Access-Control-Allow-Origin', '*'); // or restrict to 'https://mrmarthub.github.io'
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') {
@@ -34,6 +35,7 @@ export default async function handler(req, res) {
     let subscribers = [];
     let currentSha = null;
 
+    // Try to load current subscriber list
     try {
       const response = await octokit.rest.repos.getContent({
         owner: githubConfig.repo.split('/')[0],
@@ -45,14 +47,17 @@ export default async function handler(req, res) {
       const content = Buffer.from(response.data.content, 'base64').toString('utf8');
       subscribers = JSON.parse(content);
       currentSha = response.data.sha;
+
     } catch (error) {
       if (error.status !== 404) {
-        console.error('Error loading file:', error);
+        console.error('Error loading subscriber file:', error);
         return res.status(500).json({ error: 'Unable to load subscriber list' });
       }
-      // File not found, we'll create it
+      // File doesn't exist yet — create a new one
+      subscribers = [];
     }
 
+    // Check for duplicate
     const existing = subscribers.find(
       sub => sub.email.toLowerCase() === email.toLowerCase()
     );
@@ -61,6 +66,7 @@ export default async function handler(req, res) {
       return res.status(409).json({ error: 'Email already subscribed' });
     }
 
+    // Add new subscriber
     const newSubscriber = {
       email: email.toLowerCase(),
       subscribedAt: timestamp || new Date().toISOString(),
@@ -70,7 +76,8 @@ export default async function handler(req, res) {
 
     subscribers.push(newSubscriber);
 
-    const encodedContent = Buffer.from(
+    // Encode and upload back to GitHub
+    const contentEncoded = Buffer.from(
       JSON.stringify(subscribers, null, 2)
     ).toString('base64');
 
@@ -79,7 +86,7 @@ export default async function handler(req, res) {
       repo: githubConfig.repo.split('/')[1],
       path: githubConfig.file,
       message: `Add subscriber: ${email}`,
-      content: encodedContent,
+      content: contentEncoded,
       branch: githubConfig.branch
     };
 
@@ -89,7 +96,7 @@ export default async function handler(req, res) {
 
     await octokit.rest.repos.createOrUpdateFileContents(updateData);
 
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
       message: 'Successfully subscribed',
       totalSubscribers: subscribers.length
@@ -97,6 +104,6 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Newsletter subscription error:', error);
-    res.status(500).json({ error: 'Failed to process subscription' });
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

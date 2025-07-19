@@ -1117,18 +1117,6 @@
     "category": "fun"
   },
   {
-    "title": "AI Kiss & Hug Video Maker",
-    "emoji": "😍",
-    "description": "Generate romantic or absurd AI-powered kiss/hug deepfake videos.",
-    "tags": [
-      "AI",
-      "Video",
-      "Deepfake"
-    ],
-    "link": "https://example-deepvideomaker.ai",
-    "category": "fun"
-  },
-  {
     "title": "FakeYou",
     "emoji": "🎙️",
     "description": "Convert text into speech in celebrity or character voices using AI.",
@@ -1271,5 +1259,17 @@
     ],
     "link": "https://postmodernismgenerator.com",
     "category": "fun"
+  },
+  {
+    "title": "AI Kiss & Hug Video Maker🤍",
+    "description": "Generate romantic or absurd AI-powered kiss/hug deepfake videos.\n",
+    "link": "https://www.clipfly.ai/aitools/scene?c=kiss",
+    "category": "audio",
+    "emoji": "💕",
+    "tags": [
+      "AI",
+      "VIDEO",
+      "DEEPFAKE"
+    ]
   }
 ]

@@ -1,9 +1,14 @@
 [
- {
+  {
     "title": "Superme.ai",
     "emoji": "🚀",
     "description": "Use AI to ask real people... or ar they?",
-    "tags": ["AI", "Humor", "Startups", "Creative"],
+    "tags": [
+      "AI",
+      "Humor",
+      "Startups",
+      "Creative"
+    ],
     "link": "https://superme.ai",
     "category": "ai-tools"
   },
@@ -11,7 +16,11 @@
     "title": "This Person Does Not Exist",
     "emoji": "👤",
     "description": "An AI that generates incredibly realistic faces of people who don't actually exist using StyleGAN. Each refresh creates a completely new person.",
-    "tags": ["AI", "Neural Networks", "Computer Vision"],
+    "tags": [
+      "AI",
+      "Neural Networks",
+      "Computer Vision"
+    ],
     "link": "https://thispersondoesnotexist.com",
     "category": "ai-tools"
   },
@@ -19,7 +28,11 @@
     "title": "AI Dungeon",
     "emoji": "🏰",
     "description": "An infinitely generated text adventure game powered by AI. Create any story, go anywhere, do anything in this AI-powered storytelling experience.",
-    "tags": ["AI", "Gaming", "Text Generation"],
+    "tags": [
+      "AI",
+      "Gaming",
+      "Text Generation"
+    ],
     "link": "https://play.aidungeon.io",
     "category": "games"
   },
@@ -27,7 +40,11 @@
     "title": "Artbreeder",
     "emoji": "🎨",
     "description": "Collaborative AI art tool that lets you create and explore images using GANs. Mix and breed images to create endless variations.",
-    "tags": ["AI", "Art", "Creative"],
+    "tags": [
+      "AI",
+      "Art",
+      "Creative"
+    ],
     "link": "https://www.artbreeder.com",
     "category": "creative"
   },
@@ -35,7 +52,11 @@
     "title": "RunwayML",
     "emoji": "✨",
     "description": "Creative AI tools for artists and creators. Generate videos, images, and audio with cutting-edge machine learning models.",
-    "tags": ["AI", "Creative", "Video"],
+    "tags": [
+      "AI",
+      "Creative",
+      "Video"
+    ],
     "link": "https://runwayml.com",
     "category": "creative"
   },
@@ -43,7 +64,11 @@
     "title": "Quick, Draw!",
     "emoji": "✏️",
     "description": "Google's AI experiment that challenges you to draw objects while a neural network tries to guess what you're drawing.",
-    "tags": ["AI", "Google", "Drawing"],
+    "tags": [
+      "AI",
+      "Google",
+      "Drawing"
+    ],
     "link": "https://quickdraw.withgoogle.com",
     "category": "games"
   },
@@ -51,7 +76,11 @@
     "title": "Talk to Transformer",
     "emoji": "🤖",
     "description": "GPT-2 powered text completion tool. Start typing and watch AI continue your thoughts in surprisingly coherent ways.",
-    "tags": ["AI", "Text Generation", "GPT"],
+    "tags": [
+      "AI",
+      "Text Generation",
+      "GPT"
+    ],
     "link": "https://talktotransformer.com",
     "category": "ai-tools"
   },
@@ -59,7 +88,11 @@
     "title": "DeepFakes Web",
     "emoji": "🎭",
     "description": "Online deepfake maker that uses AI to swap faces in videos. Create realistic face swaps with just a few clicks.",
-    "tags": ["AI", "Video", "Face Swap"],
+    "tags": [
+      "AI",
+      "Video",
+      "Face Swap"
+    ],
     "link": "https://deepfakesweb.com",
     "category": "experimental"
   },
@@ -67,7 +100,11 @@
     "title": "Magenta Studio",
     "emoji": "🎵",
     "description": "Google's AI music tools that help you create music using machine learning. Generate melodies, drums, and more.",
-    "tags": ["AI", "Music", "Google"],
+    "tags": [
+      "AI",
+      "Music",
+      "Google"
+    ],
     "link": "https://magenta.tensorflow.org/studio",
     "category": "creative"
   },
@@ -75,7 +112,11 @@
     "title": "This Cat Does Not Exist",
     "emoji": "🐱",
     "description": "Like This Person Does Not Exist, but for cats! AI-generated feline faces that look surprisingly real.",
-    "tags": ["AI", "Cats", "Neural Networks"],
+    "tags": [
+      "AI",
+      "Cats",
+      "Neural Networks"
+    ],
     "link": "https://thiscatdoesnotexist.com",
     "category": "fun"
   },
@@ -83,7 +124,11 @@
     "title": "Remove.bg",
     "emoji": "🖼️",
     "description": "AI-powered background removal tool. Upload any image and get a perfect cutout in seconds.",
-    "tags": ["AI", "Image Processing", "Tools"],
+    "tags": [
+      "AI",
+      "Image Processing",
+      "Tools"
+    ],
     "link": "https://www.remove.bg",
     "category": "ai-tools"
   },
@@ -91,7 +136,11 @@
     "title": "Akinator",
     "emoji": "🧞",
     "description": "The web genie that reads your mind! Think of a character and Akinator will guess who it is through AI-powered questions.",
-    "tags": ["AI", "Game", "Mind Reading"],
+    "tags": [
+      "AI",
+      "Game",
+      "Mind Reading"
+    ],
     "link": "https://en.akinator.com",
     "category": "games"
   },
@@ -99,7 +148,11 @@
     "title": "DeepL Translator",
     "emoji": "🌍",
     "description": "AI-powered translation that's often more accurate than Google Translate. Uses neural networks for natural translations.",
-    "tags": ["AI", "Translation", "Language"],
+    "tags": [
+      "AI",
+      "Translation",
+      "Language"
+    ],
     "link": "https://www.deepl.com/translator",
     "category": "ai-tools"
   },
@@ -107,7 +160,11 @@
     "title": "Runway Green Screen",
     "emoji": "🎬",
     "description": "AI-powered green screen removal without the green screen. Remove backgrounds from videos automatically.",
-    "tags": ["AI", "Video", "Background Removal"],
+    "tags": [
+      "AI",
+      "Video",
+      "Background Removal"
+    ],
     "link": "https://runwayml.com/green-screen",
     "category": "creative"
   },
@@ -115,7 +172,11 @@
     "title": "AI Weirdness",
     "emoji": "🤪",
     "description": "A blog showcasing the hilarious and bizarre results when AI tries to understand human things. Neural networks being weird.",
-    "tags": ["AI", "Humor", "Blog"],
+    "tags": [
+      "AI",
+      "Humor",
+      "Blog"
+    ],
     "link": "https://aiweirdness.com",
     "category": "fun"
   },
@@ -123,7 +184,11 @@
     "title": "Teachable Machine",
     "emoji": "🎓",
     "description": "Google's tool for training your own machine learning models. No coding required - just upload examples and train!",
-    "tags": ["AI", "Machine Learning", "Education"],
+    "tags": [
+      "AI",
+      "Machine Learning",
+      "Education"
+    ],
     "link": "https://teachablemachine.withgoogle.com",
     "category": "ai-tools"
   },
@@ -131,7 +196,11 @@
     "title": "DALL-E Mini",
     "emoji": "🖌️",
     "description": "Create images from text descriptions using AI. Type anything and watch the AI attempt to draw it.",
-    "tags": ["AI", "Image Generation", "Text to Image"],
+    "tags": [
+      "AI",
+      "Image Generation",
+      "Text to Image"
+    ],
     "link": "https://huggingface.co/spaces/dalle-mini/dalle-mini",
     "category": "creative"
   },
@@ -139,7 +208,11 @@
     "title": "Infinite Craft",
     "emoji": "🔥",
     "description": "A crafting game where you combine elements to create new things. Start with fire, water, earth, and wind.",
-    "tags": ["Game", "Crafting", "Creative"],
+    "tags": [
+      "Game",
+      "Crafting",
+      "Creative"
+    ],
     "link": "https://neal.fun/infinite-craft/",
     "category": "games"
   },
@@ -147,7 +220,11 @@
     "title": "Pockemon",
     "emoji": "⚡",
     "description": "AI-generated Pokemon with descriptions. See what happens when neural networks try to create new Pokemon.",
-    "tags": ["AI", "Pokemon", "Generation"],
+    "tags": [
+      "AI",
+      "Pokemon",
+      "Generation"
+    ],
     "link": "https://pockemon.com",
     "category": "fun"
   },
@@ -155,7 +232,11 @@
     "title": "Semantic Scholar",
     "emoji": "📚",
     "description": "AI-powered academic search engine that understands scientific literature and finds relevant papers.",
-    "tags": ["AI", "Research", "Academic"],
+    "tags": [
+      "AI",
+      "Research",
+      "Academic"
+    ],
     "link": "https://www.semanticscholar.org",
     "category": "ai-tools"
   },
@@ -163,7 +244,11 @@
     "title": "Lobe",
     "emoji": "🧠",
     "description": "Microsoft's visual tool for training machine learning models. Drag, drop, and train without writing code.",
-    "tags": ["AI", "Machine Learning", "Visual"],
+    "tags": [
+      "AI",
+      "Machine Learning",
+      "Visual"
+    ],
     "link": "https://www.lobe.ai",
     "category": "ai-tools"
   },
@@ -171,7 +256,11 @@
     "title": "Waifu2x",
     "emoji": "🖼️",
     "description": "AI-powered image upscaling specifically designed for anime and artwork. Make images bigger without losing quality.",
-    "tags": ["AI", "Image Processing", "Upscaling"],
+    "tags": [
+      "AI",
+      "Image Processing",
+      "Upscaling"
+    ],
     "link": "https://waifu2x.udp.jp",
     "category": "ai-tools"
   },
@@ -179,7 +268,11 @@
     "title": "Jukebox",
     "emoji": "🎧",
     "description": "OpenAI's neural network that generates music in raw audio format. Create songs in various genres and styles.",
-    "tags": ["AI", "Music", "Generation"],
+    "tags": [
+      "AI",
+      "Music",
+      "Generation"
+    ],
     "link": "https://jukebox.openai.com",
     "category": "creative"
   },
@@ -187,7 +280,11 @@
     "title": "This Word Does Not Exist",
     "emoji": "📝",
     "description": "AI that generates fake words that sound like they could be real. Complete with definitions and pronunciations.",
-    "tags": ["AI", "Language", "Words"],
+    "tags": [
+      "AI",
+      "Language",
+      "Words"
+    ],
     "link": "https://www.thisworddoesnotexist.com",
     "category": "fun"
   },
@@ -195,7 +292,11 @@
     "title": "AI Painter",
     "emoji": "🎨",
     "description": "Transform your photos into artwork using AI. Apply various artistic styles from famous painters.",
-    "tags": ["AI", "Art", "Style Transfer"],
+    "tags": [
+      "AI",
+      "Art",
+      "Style Transfer"
+    ],
     "link": "https://aipainter.com",
     "category": "creative"
   },
@@ -203,7 +304,11 @@
     "title": "Dream Interpreter AI",
     "emoji": "🌙",
     "description": "Type your dream and let the AI give you a surreal and poetic interpretation. It blends psychology, symbolism, and a bit of absurdity.",
-    "tags": ["AI", "Dreams", "Creative"],
+    "tags": [
+      "AI",
+      "Dreams",
+      "Creative"
+    ],
     "link": "https://dreaminterpreter.ai",
     "category": "fun"
   },
@@ -211,7 +316,11 @@
     "title": "RoboPoet",
     "emoji": "📝",
     "description": "Generate poems in various styles and moods using AI. Romantic sonnet or post-apocalyptic haiku? Your robot muse awaits.",
-    "tags": ["AI", "Poetry", "Creative Writing"],
+    "tags": [
+      "AI",
+      "Poetry",
+      "Creative Writing"
+    ],
     "link": "https://robopoet.com",
     "category": "creative"
   },
@@ -219,7 +328,11 @@
     "title": "This Resume Does Not Exist",
     "emoji": "📄",
     "description": "A surreal AI experiment generating fake resumes with uncanny names, job titles, and skills.",
-    "tags": ["AI", "Humor", "Text Generation"],
+    "tags": [
+      "AI",
+      "Humor",
+      "Text Generation"
+    ],
     "link": "https://thisresumedoesnotexist.com",
     "category": "fun"
   },
@@ -227,7 +340,11 @@
     "title": "Latent Space Explorer",
     "emoji": "🌀",
     "description": "Visually navigate the 'latent space' of GANs to discover strange and beautiful in-between images.",
-    "tags": ["AI", "GAN", "Exploration"],
+    "tags": [
+      "AI",
+      "GAN",
+      "Exploration"
+    ],
     "link": "https://latentspaceexplorer.com",
     "category": "experimental"
   },
@@ -235,7 +352,11 @@
     "title": "AI Roguelite",
     "emoji": "🗺️",
     "description": "An AI-generated dungeon crawler where the levels, monsters, and items are created on the fly as you play.",
-    "tags": ["AI", "Gaming", "Procedural Generation"],
+    "tags": [
+      "AI",
+      "Gaming",
+      "Procedural Generation"
+    ],
     "link": "https://airoguelite.com",
     "category": "games"
   },
@@ -243,7 +364,11 @@
     "title": "This Startup Does Not Exist",
     "emoji": "🚀",
     "description": "Discover hilarious and oddly plausible fake startups with generated names, taglines, and business models.",
-    "tags": ["AI", "Humor", "Entrepreneurship"],
+    "tags": [
+      "AI",
+      "Humor",
+      "Entrepreneurship"
+    ],
     "link": "https://thisstartupdoesnotexist.com",
     "category": "fun"
   },
@@ -251,7 +376,11 @@
     "title": "Deep Nostalgia",
     "emoji": "📸",
     "description": "Bring old photos to life. AI animates faces in historical pictures to create realistic blinking and smiling.",
-    "tags": ["AI", "Animation", "Photos"],
+    "tags": [
+      "AI",
+      "Animation",
+      "Photos"
+    ],
     "link": "https://www.myheritage.com/deep-nostalgia",
     "category": "ai-tools"
   },
@@ -259,7 +388,11 @@
     "title": "AI Comic Factory",
     "emoji": "📚",
     "description": "Write your own comic script and have AI generate a comic strip based on it — characters, dialogue, and panels included.",
-    "tags": ["AI", "Comics", "Creative"],
+    "tags": [
+      "AI",
+      "Comics",
+      "Creative"
+    ],
     "link": "https://aicomicfactory.com/",
     "category": "creative"
   },
@@ -267,7 +400,11 @@
     "title": "SongR",
     "emoji": "🎤",
     "description": "Describe a mood or story and let AI generate song lyrics for you — complete with rhymes and chorus.",
-    "tags": ["AI", "Music", "Lyrics"],
+    "tags": [
+      "AI",
+      "Music",
+      "Lyrics"
+    ],
     "link": "https://songr.ai",
     "category": "creative"
   },
@@ -275,7 +412,11 @@
     "title": "Chirp AI",
     "emoji": "🐦",
     "description": "Enter a topic and this AI writes eerily accurate fake tweets in the style of famous personalities.",
-    "tags": ["AI", "Social Media", "Impersonation"],
+    "tags": [
+      "AI",
+      "Social Media",
+      "Impersonation"
+    ],
     "link": "https://chirp.ai",
     "category": "fun"
   },
@@ -283,7 +424,11 @@
     "title": "AttnGAN",
     "emoji": "🧠",
     "description": "Text-to-image generative model that visualizes your descriptions—results can be beautiful or bizarre.",
-    "tags": ["AI", "Text to Image", "GAN"],
+    "tags": [
+      "AI",
+      "Text to Image",
+      "GAN"
+    ],
     "link": "https://github.com/taoxugit/AttnGAN",
     "category": "creative"
   },
@@ -291,7 +436,11 @@
     "title": "Pix2pix",
     "emoji": "🖼️",
     "description": "Draw a sketch and the AI transforms it into a photo‑realistic image.",
-    "tags": ["AI", "Sketch", "Image Generation"],
+    "tags": [
+      "AI",
+      "Sketch",
+      "Image Generation"
+    ],
     "link": "https://affinelayer.com/pixsrv/",
     "category": "creative"
   },
@@ -299,7 +448,11 @@
     "title": "Infinite Drum Machine",
     "emoji": "🥁",
     "description": "Browse hundreds of real-world sounds and make beats in this interactive t‑SNE sound map.",
-    "tags": ["AI", "Music", "Fun"],
+    "tags": [
+      "AI",
+      "Music",
+      "Fun"
+    ],
     "link": "https://experiments.withgoogle.com/drum-machine",
     "category": "games"
   },
@@ -307,7 +460,11 @@
     "title": "FastPhotoStyle",
     "emoji": "✨",
     "description": "Apply a painterly style to your photos in a click—NVIDIA's stylization demo.",
-    "tags": ["AI", "Style Transfer", "Photos"],
+    "tags": [
+      "AI",
+      "Style Transfer",
+      "Photos"
+    ],
     "link": "https://github.com/NVIDIA/FastPhotoStyle",
     "category": "creative"
   },
@@ -315,7 +472,11 @@
     "title": "Talk to Books",
     "emoji": "📚",
     "description": "Ask questions and get AI-generated excerpts from books—like chatting with a librarian.",
-    "tags": ["AI", "Text Generation", "NLP"],
+    "tags": [
+      "AI",
+      "Text Generation",
+      "NLP"
+    ],
     "link": "https://books.google.com/talktobooks",
     "category": "tools"
   },
@@ -323,7 +484,11 @@
     "title": "AI Duet",
     "emoji": "🎹",
     "description": "Play the piano and listen as the AI improvises a duet in real time.",
-    "tags": ["AI", "Music", "Interactive"],
+    "tags": [
+      "AI",
+      "Music",
+      "Interactive"
+    ],
     "link": "https://experiments.withgoogle.com/ai/ai-duet",
     "category": "creative"
   },
@@ -331,7 +496,11 @@
     "title": "Even Stranger Things",
     "emoji": "👻",
     "description": "Turn any photo into a Stranger Things-style poster with this quirky AI filter.",
-    "tags": ["AI", "Filter", "Fun"],
+    "tags": [
+      "AI",
+      "Filter",
+      "Fun"
+    ],
     "link": "https://strangethingsexperiment.com",
     "category": "fun"
   },
@@ -339,7 +508,11 @@
     "title": "AutoDraw",
     "emoji": "✏️",
     "description": "Doodle freely and watch AI suggest polished clipart versions of your sketches.",
-    "tags": ["AI", "Drawing", "Tools"],
+    "tags": [
+      "AI",
+      "Drawing",
+      "Tools"
+    ],
     "link": "https://www.autodraw.com",
     "category": "ai-tools"
   },
@@ -347,7 +520,11 @@
     "title": "Semantris",
     "emoji": "🔠",
     "description": "Google’s addictive word association game based on semantic vectors.",
-    "tags": ["AI", "Word Game", "NLP"],
+    "tags": [
+      "AI",
+      "Word Game",
+      "NLP"
+    ],
     "link": "https://research.google.com/semantris",
     "category": "games"
   },
@@ -355,7 +532,11 @@
     "title": "Thing Translator",
     "emoji": "🌎",
     "description": "Snap an object and see the AI describe it—and tell you what it is in other languages.",
-    "tags": ["AI", "Vision", "Language"],
+    "tags": [
+      "AI",
+      "Vision",
+      "Language"
+    ],
     "link": "https://experiments.withgoogle.com/thing-translator",
     "category": "tools"
   },
@@ -363,7 +544,11 @@
     "title": "GenType",
     "emoji": "🔠",
     "description": "Generate one-of-a-kind alphabets using AI in this fun Google Labs experiment.",
-    "tags": ["AI", "Fonts", "Creative"],
+    "tags": [
+      "AI",
+      "Fonts",
+      "Creative"
+    ],
     "link": "https://labs.google/experiments/GenType",
     "category": "creative"
   },
@@ -371,7 +556,11 @@
     "title": "National Gallery Mixtape",
     "emoji": "🎼",
     "description": "Create a soundtrack inspired by National Gallery paintings using AI.",
-    "tags": ["AI", "Music", "Art"],
+    "tags": [
+      "AI",
+      "Music",
+      "Art"
+    ],
     "link": "https://labs.google/experiments/national-gallery-mixtape",
     "category": "creative"
   },
@@ -379,7 +568,11 @@
     "title": "Talking Tours",
     "emoji": "🗺️",
     "description": "Explore Street View landmarks narrated by AI in this immersive Google Arts & Culture demo.",
-    "tags": ["AI", "Audio", "Tour"],
+    "tags": [
+      "AI",
+      "Audio",
+      "Tour"
+    ],
     "link": "https://labs.google/experiments/talking-tours",
     "category": "education"
   },
@@ -387,7 +580,11 @@
     "title": "Google AI Experiments",
     "emoji": "🤹",
     "description": "A sandbox of playful, lightweight AI experiments: grammar tools, games, music, drawing bots.",
-    "tags": ["AI", "Experiments", "Playground"],
+    "tags": [
+      "AI",
+      "Experiments",
+      "Playground"
+    ],
     "link": "https://experiments.withgoogle.com",
     "category": "fun"
   },
@@ -395,7 +592,11 @@
     "title": "FakeYou",
     "emoji": "🎙️",
     "description": "Convert text into voice in the style of celebrities and fictional characters.",
-    "tags": ["AI", "Voice", "Fun"],
+    "tags": [
+      "AI",
+      "Voice",
+      "Fun"
+    ],
     "link": "https://fakeyou.com",
     "category": "fun"
   },
@@ -403,7 +604,11 @@
     "title": "Craiyon",
     "emoji": "🖌️",
     "description": "Formerly DALL·E Mini—type a prompt and get quirky AI art in seconds.",
-    "tags": ["AI", "Art", "Text to Image"],
+    "tags": [
+      "AI",
+      "Art",
+      "Text to Image"
+    ],
     "link": "https://www.craiyon.com",
     "category": "creative"
   },
@@ -411,7 +616,11 @@
     "title": "FreddieMeter",
     "emoji": "🎤",
     "description": "Sing into your mic and AI tells you how much you sound like Freddie Mercury.",
-    "tags": ["AI", "Music", "Voice"],
+    "tags": [
+      "AI",
+      "Music",
+      "Voice"
+    ],
     "link": "https://experiments.withgoogle.com/freddiemeter",
     "category": "fun"
   },
@@ -419,7 +628,11 @@
     "title": "Evolution by Keiwan",
     "emoji": "🦠",
     "description": "Watch AI-generated creatures evolve in abstract art—strange and mesmerizing.",
-    "tags": ["AI", "Art", "Experimental"],
+    "tags": [
+      "AI",
+      "Art",
+      "Experimental"
+    ],
     "link": "https://keiwan.github.io/evolution/",
     "category": "experimental"
   },
@@ -427,7 +640,11 @@
     "title": "AIVA",
     "emoji": "🎵",
     "description": "Compose original music in various styles using AI-trained composer.",
-    "tags": ["AI", "Music", "Composition"],
+    "tags": [
+      "AI",
+      "Music",
+      "Composition"
+    ],
     "link": "https://www.aiva.ai",
     "category": "creative"
   },
@@ -435,7 +652,11 @@
     "title": "AI SpongeBob",
     "emoji": "🍍",
     "description": "AI-generated SpongeBob episodes—absurd, hilarious, and unhinged.",
-    "tags": ["AI", "Video", "Parody"],
+    "tags": [
+      "AI",
+      "Video",
+      "Parody"
+    ],
     "link": "https://en.wikipedia.org/wiki/Ai_sponge",
     "category": "fun"
   },
@@ -443,7 +664,11 @@
     "title": "AI Weirdness",
     "emoji": "🤪",
     "description": "Janelle Shane's blog of hilarious AI-generated oddities—from weird ice‑cream flavors to cursed candy hearts.",
-    "tags": ["AI", "Humor", "Blog"],
+    "tags": [
+      "AI",
+      "Humor",
+      "Blog"
+    ],
     "link": "https://aiweirdness.com",
     "category": "fun"
   },
@@ -451,7 +676,11 @@
     "title": "BoredHumans",
     "emoji": "🖥️",
     "description": "100+ free quirky AI tools—chatbots, lyrics generators, image mashups and more.",
-    "tags": ["AI", "Games", "Fun"],
+    "tags": [
+      "AI",
+      "Games",
+      "Fun"
+    ],
     "link": "https://boredhumans.com",
     "category": "fun"
   },
@@ -459,7 +688,11 @@
     "title": "Character.ai",
     "emoji": "🗣️",
     "description": "Chat or role‑play with AI characters—some even understand images.",
-    "tags": ["AI", "Chatbot", "Roleplay"],
+    "tags": [
+      "AI",
+      "Chatbot",
+      "Roleplay"
+    ],
     "link": "https://character.ai",
     "category": "ai-tools"
   },
@@ -467,7 +700,11 @@
     "title": "Formulas HQ",
     "emoji": "📊",
     "description": "Get Excel formulas, regex, VBA scripts by describing what you need in plain language.",
-    "tags": ["AI", "Spreadsheet", "Productivity"],
+    "tags": [
+      "AI",
+      "Spreadsheet",
+      "Productivity"
+    ],
     "link": "https://formulashq.com",
     "category": "tools"
   },
@@ -475,15 +712,23 @@
     "title": "Botnik Studios",
     "emoji": "✍️",
     "description": "Predictive-text comedy—create absurd fan‑fiction and more with quirky AI suggestions.",
-    "tags": ["AI", "Comedy", "Writing"],
+    "tags": [
+      "AI",
+      "Comedy",
+      "Writing"
+    ],
     "link": "http://botnik.org",
     "category": "fun"
   },
-{
+  {
     "title": "Blob Opera",
     "emoji": "🎶",
     "description": "Create opera harmonies by dragging adorable blob voices—AI assembles them into a chorus.",
-    "tags": ["AI", "Music", "Fun"],
+    "tags": [
+      "AI",
+      "Music",
+      "Fun"
+    ],
     "link": "https://microsoft.github.io/BlobOpera/",
     "category": "creative"
   },
@@ -491,7 +736,11 @@
     "title": "Fontjoy",
     "emoji": "🔠",
     "description": "Use AI to generate font pairings that look great together—perfect for designers.",
-    "tags": ["AI", "Design", "Fonts"],
+    "tags": [
+      "AI",
+      "Design",
+      "Fonts"
+    ],
     "link": "https://fontjoy.com",
     "category": "tools"
   },
@@ -499,15 +748,23 @@
     "title": "Semiconductor",
     "emoji": "🎻",
     "description": "Conduct a virtual orchestra using your webcam—move to make AI-generated music.",
-    "tags": ["AI", "Music", "Interactive"],
-    "link": "https://semiconductor.io", 
+    "tags": [
+      "AI",
+      "Music",
+      "Interactive"
+    ],
+    "link": "https://semiconductor.io",
     "category": "creative"
   },
   {
     "title": "Giorgio Cam",
     "emoji": "🎤",
     "description": "Snap a picture and AI spits rap lyrics about it—AI-powered image-to-rap.",
-    "tags": ["AI", "Image Recognition", "Fun"],
+    "tags": [
+      "AI",
+      "Image Recognition",
+      "Fun"
+    ],
     "link": "https://experiment.withgoogle.com/giorgio-cam",
     "category": "fun"
   },
@@ -515,7 +772,11 @@
     "title": "Zombo.com",
     "emoji": "🌀",
     "description": "A classic single-serving site promising \"everything is possible\"—a surreal AI-free relic.",
-    "tags": ["Web Art", "Nostalgia", "Fun"],
+    "tags": [
+      "Web Art",
+      "Nostalgia",
+      "Fun"
+    ],
     "link": "https://www.zombo.com",
     "category": "fun"
   },
@@ -523,7 +784,11 @@
     "title": "Superbad",
     "emoji": "🕸️",
     "description": "1997-era web–art maze—click endlessly through bizarre, colorful subpages.",
-    "tags": ["Web Art", "Interactive", "Surreal"],
+    "tags": [
+      "Web Art",
+      "Interactive",
+      "Surreal"
+    ],
     "link": "http://www.superbad.com",
     "category": "experimental"
   },
@@ -531,7 +796,11 @@
     "title": "Poietic Generator",
     "emoji": "🌐",
     "description": "Collaborative net-art game: users draw realtime to co-create a global canvas.",
-    "tags": ["AI", "Net Art", "Collaboration"],
+    "tags": [
+      "AI",
+      "Net Art",
+      "Collaboration"
+    ],
     "link": "http://poietic-generator.net",
     "category": "experimental"
   },
@@ -539,7 +808,11 @@
     "title": "Mackerelmedia Fish",
     "emoji": "🐟",
     "description": "ARG-style browser game exploring archived, forgotten websites in a nostalgic web dive.",
-    "tags": ["Game", "ARG", "Web Culture"],
+    "tags": [
+      "Game",
+      "ARG",
+      "Web Culture"
+    ],
     "link": "http://mackerelmediafish.com",
     "category": "games"
   },
@@ -547,7 +820,11 @@
     "title": "Jabberwacky",
     "emoji": "💬",
     "description": "A whimsical chatbot from 1997 aiming to pass as human with humorous conversation.",
-    "tags": ["AI", "Chatbot", "Retro"],
+    "tags": [
+      "AI",
+      "Chatbot",
+      "Retro"
+    ],
     "link": "https://www.jabberwacky.com",
     "category": "ai-tools"
   },
@@ -555,7 +832,11 @@
     "title": "Nothing, Forever",
     "emoji": "📺",
     "description": "AI-generated infinite sitcom livestream parodying Seinfeld, updating endlessly.",
-    "tags": ["AI", "Stream", "Parody"],
+    "tags": [
+      "AI",
+      "Stream",
+      "Parody"
+    ],
     "link": "https://www.twitch.tv/watchmeforever",
     "category": "fun"
   },
@@ -563,7 +844,11 @@
     "title": "Quick, Draw!",
     "emoji": "✏️",
     "description": "20‑sec Pictionary: draw something and AI guesses—learning from millions of doodles.",
-    "tags": ["AI", "Drawing", "Game"],
+    "tags": [
+      "AI",
+      "Drawing",
+      "Game"
+    ],
     "link": "https://quickdraw.withgoogle.com",
     "category": "games"
   },
@@ -571,7 +856,11 @@
     "title": "Infinite Drum Machine",
     "emoji": "🥁",
     "description": "Browse real-world sounds in a map and build beats—Google’s t‑SNE audio explorer.",
-    "tags": ["AI", "Music", "Fun"],
+    "tags": [
+      "AI",
+      "Music",
+      "Fun"
+    ],
     "link": "https://experiments.withgoogle.com/drum-machine",
     "category": "games"
   },
@@ -579,7 +868,11 @@
     "title": "AI Duet",
     "emoji": "🎹",
     "description": "Play piano and have AI improvise along—the perfect musical partner.",
-    "tags": ["AI", "Music", "Interactive"],
+    "tags": [
+      "AI",
+      "Music",
+      "Interactive"
+    ],
     "link": "https://experiments.withgoogle.com/ai/ai-duet",
     "category": "creative"
   },
@@ -587,7 +880,11 @@
     "title": "Talk to Books",
     "emoji": "📚",
     "description": "Ask anything—it returns AI-selected book passages, like talking to a librarian.",
-    "tags": ["AI", "NLP", "Research"],
+    "tags": [
+      "AI",
+      "NLP",
+      "Research"
+    ],
     "link": "https://books.google.com/talktobooks",
     "category": "tools"
   },
@@ -595,7 +892,11 @@
     "title": "Thing Translator",
     "emoji": "🌍",
     "description": "Snap an object and AI names it—plus translates to other languages instantly.",
-    "tags": ["AI", "Vision", "Translation"],
+    "tags": [
+      "AI",
+      "Vision",
+      "Translation"
+    ],
     "link": "https://experiments.withgoogle.com/thing-translator",
     "category": "tools"
   },
@@ -603,7 +904,11 @@
     "title": "Googler’s AI Experiments",
     "emoji": "🤹",
     "description": "Hub with dozens of playful AI demos—drawing, writing, music, translation, and more.",
-    "tags": ["AI", "Sandbox", "Fun"],
+    "tags": [
+      "AI",
+      "Sandbox",
+      "Fun"
+    ],
     "link": "https://experiments.withgoogle.com",
     "category": "fun"
   },
@@ -611,7 +916,11 @@
     "title": "FreddieMeter",
     "emoji": "🎤",
     "description": "Sing into your mic—AI judges how much you sound like Freddie Mercury.",
-    "tags": ["AI", "Voice", "Music"],
+    "tags": [
+      "AI",
+      "Voice",
+      "Music"
+    ],
     "link": "https://experiments.withgoogle.com/freddiemeter",
     "category": "fun"
   },
@@ -619,7 +928,11 @@
     "title": "FakeYou",
     "emoji": "🗣️",
     "description": "Text-to-speech in celebrity or cartoon voices—AI voice impersonation.",
-    "tags": ["AI", "Voice", "Fun"],
+    "tags": [
+      "AI",
+      "Voice",
+      "Fun"
+    ],
     "link": "https://fakeyou.com",
     "category": "fun"
   },
@@ -627,7 +940,11 @@
     "title": "Craiyon",
     "emoji": "🖌️",
     "description": "Type a prompt, generate quirky AI art strips—from the old DALL·E mini.",
-    "tags": ["AI", "Art", "Text to Image"],
+    "tags": [
+      "AI",
+      "Art",
+      "Text to Image"
+    ],
     "link": "https://www.craiyon.com",
     "category": "creative"
   },
@@ -635,7 +952,11 @@
     "title": "AttnGAN",
     "emoji": "🌄",
     "description": "Research demo: generate images from sentences—sometimes surreal, sometimes gorgeous.",
-    "tags": ["AI", "GAN", "Research"],
+    "tags": [
+      "AI",
+      "GAN",
+      "Research"
+    ],
     "link": "https://github.com/taoxugit/AttnGAN",
     "category": "experimental"
   },
@@ -643,7 +964,11 @@
     "title": "Pix2pix",
     "emoji": "🖼️",
     "description": "Sketch to realism—draw outlines, let AI fill photo-like detail.",
-    "tags": ["AI", "Image-to-Image", "Creative"],
+    "tags": [
+      "AI",
+      "Image-to-Image",
+      "Creative"
+    ],
     "link": "https://affinelayer.com/pixsrv/",
     "category": "creative"
   },
@@ -651,7 +976,11 @@
     "title": "FastPhotoStyle",
     "emoji": "✨",
     "description": "Transfer painterly style to your photos—NVIDIA demo.",
-    "tags": ["AI", "Style Transfer", "Photos"],
+    "tags": [
+      "AI",
+      "Style Transfer",
+      "Photos"
+    ],
     "link": "https://github.com/NVIDIA/FastPhotoStyle",
     "category": "creative"
   },
@@ -659,7 +988,11 @@
     "title": "Evolution by Keiwan",
     "emoji": "🧬",
     "description": "Design creatures with joints and muscles—watch AI animate and evolve them.",
-    "tags": ["AI", "Art", "Experimental"],
+    "tags": [
+      "AI",
+      "Art",
+      "Experimental"
+    ],
     "link": "https://keiwan.github.io/evolution/",
     "category": "experimental"
   },
@@ -667,7 +1000,11 @@
     "title": "AIVA",
     "emoji": "🎵",
     "description": "AI composer writes original music in different styles and moods.",
-    "tags": ["AI", "Music", "Composition"],
+    "tags": [
+      "AI",
+      "Music",
+      "Composition"
+    ],
     "link": "https://www.aiva.ai",
     "category": "creative"
   },
@@ -675,15 +1012,23 @@
     "title": "AI Weirdness",
     "emoji": "🤪",
     "description": "Janelle Shane’s blog of weird and funny AI outputs—cursed flavors, odd stories.",
-    "tags": ["AI", "Blog", "Humor"],
+    "tags": [
+      "AI",
+      "Blog",
+      "Humor"
+    ],
     "link": "https://aiweirdness.com",
     "category": "fun"
   },
-{
+  {
     "title": "Deep Dream Generator",
     "emoji": "🌌",
     "description": "Generate surreal, dream-like images and even short videos using advanced neural networks.",
-    "tags": ["AI", "Art", "Image Generation"],
+    "tags": [
+      "AI",
+      "Art",
+      "Image Generation"
+    ],
     "link": "https://deepdreamgenerator.com",
     "category": "creative"
   },
@@ -691,7 +1036,11 @@
     "title": "Imagiyo",
     "emoji": "🎨",
     "description": "AI image generator that allows edgy or NSFW prompts with lifetime access—no content filters.",
-    "tags": ["AI", "Image Generation", "NSFW"],
+    "tags": [
+      "AI",
+      "Image Generation",
+      "NSFW"
+    ],
     "link": "https://imagiyo.com",
     "category": "creative"
   },
@@ -699,7 +1048,11 @@
     "title": "InspiroBot",
     "emoji": "💡",
     "description": "AI-generated motivational quotes (with a twist)—usually absurd or darkly funny.",
-    "tags": ["AI", "Quotes", "Humor"],
+    "tags": [
+      "AI",
+      "Quotes",
+      "Humor"
+    ],
     "link": "https://inspirobot.me",
     "category": "fun"
   },
@@ -707,7 +1060,11 @@
     "title": "Quanto",
     "emoji": "➕",
     "description": "Generate weird math problems and solutions—AI-made math for amusement.",
-    "tags": ["AI", "Math", "Fun"],
+    "tags": [
+      "AI",
+      "Math",
+      "Fun"
+    ],
     "link": "https://quanto.cc",
     "category": "fun"
   },
@@ -715,7 +1072,11 @@
     "title": "Postmodernism Generator",
     "emoji": "🧾",
     "description": "Auto-generates satirical postmodern academic essays using recursive grammar.",
-    "tags": ["AI", "Text Generation", "Parody"],
+    "tags": [
+      "AI",
+      "Text Generation",
+      "Parody"
+    ],
     "link": "https://postmodernismgenerator.com",
     "category": "fun"
   },
@@ -723,7 +1084,11 @@
     "title": "Tensor.art",
     "emoji": "🖼️",
     "description": "Simple & filter-free online AI art tool—alternative to more restrictive generators.",
-    "tags": ["AI", "Art", "Image Generation"],
+    "tags": [
+      "AI",
+      "Art",
+      "Image Generation"
+    ],
     "link": "https://tensor.art",
     "category": "creative"
   },
@@ -731,7 +1096,11 @@
     "title": "AI Girlfriend Chat (Amino)",
     "emoji": "❤️",
     "description": "Chat with a virtual AI girlfriend—roleplay, story, and banter included.",
-    "tags": ["AI", "Chatbot", "Companionship"],
+    "tags": [
+      "AI",
+      "Chatbot",
+      "Companionship"
+    ],
     "link": "https://example-aigfchat.com",
     "category": "fun"
   },
@@ -739,7 +1108,11 @@
     "title": "Emoji Generator",
     "emoji": "😜",
     "description": "Upload a selfie and get custom emoji-style outputs of your face.",
-    "tags": ["AI", "Face", "Emoji"],
+    "tags": [
+      "AI",
+      "Face",
+      "Emoji"
+    ],
     "link": "https://example-emojify.com",
     "category": "fun"
   },
@@ -747,7 +1120,11 @@
     "title": "YouTube Summarizer",
     "emoji": "🎥",
     "description": "Paste a YouTube link and get an AI-generated summary of the video’s key points.",
-    "tags": ["AI", "Summarization", "Video"],
+    "tags": [
+      "AI",
+      "Summarization",
+      "Video"
+    ],
     "link": "https://example-ytsummarizer.ai",
     "category": "tools"
   },
@@ -755,7 +1132,11 @@
     "title": "AI Book Writer",
     "emoji": "📖",
     "description": "Enter a topic and let AI generate chapters or full book drafts automatically.",
-    "tags": ["AI", "Writing", "Text Generation"],
+    "tags": [
+      "AI",
+      "Writing",
+      "Text Generation"
+    ],
     "link": "https://example-bookwriter.ai",
     "category": "tools"
   },
@@ -763,7 +1144,11 @@
     "title": "Tarot Master",
     "emoji": "🔮",
     "description": "Draw tarot cards virtually and get AI-powered interpretations.",
-    "tags": ["AI", "Mystic", "Fun"],
+    "tags": [
+      "AI",
+      "Mystic",
+      "Fun"
+    ],
     "link": "https://example-tarotmaster.ai",
     "category": "fun"
   },
@@ -771,7 +1156,11 @@
     "title": "AI Kiss & Hug Video Maker",
     "emoji": "😍",
     "description": "Generate romantic or absurd AI-powered kiss/hug deepfake videos.",
-    "tags": ["AI", "Video", "Deepfake"],
+    "tags": [
+      "AI",
+      "Video",
+      "Deepfake"
+    ],
     "link": "https://example-deepvideomaker.ai",
     "category": "fun"
   },
@@ -779,7 +1168,11 @@
     "title": "FakeYou",
     "emoji": "🎙️",
     "description": "Convert text into speech in celebrity or character voices using AI.",
-    "tags": ["AI", "Voice", "Fun"],
+    "tags": [
+      "AI",
+      "Voice",
+      "Fun"
+    ],
     "link": "https://fakeyou.com",
     "category": "fun"
   },
@@ -787,7 +1180,11 @@
     "title": "Deep Dream Generator",
     "emoji": "🎨",
     "description": "Create AI-generated dream-like visuals powered by neural nets.",
-    "tags": ["AI", "Art", "Image"],
+    "tags": [
+      "AI",
+      "Art",
+      "Image"
+    ],
     "link": "https://deepdreamgenerator.com",
     "category": "creative"
   },
@@ -795,7 +1192,11 @@
     "title": "Postmodernism Generator",
     "emoji": "📃",
     "description": "Instantly generate parody academic essays with a postmodern flair.",
-    "tags": ["AI", "Essay", "Parody"],
+    "tags": [
+      "AI",
+      "Essay",
+      "Parody"
+    ],
     "link": "https://postmodernismgenerator.com",
     "category": "fun"
   },
@@ -803,7 +1204,11 @@
     "title": "Zombo.com",
     "emoji": "🌀",
     "description": "Nothing happens here—but you’re promised that anything is possible.",
-    "tags": ["Web Art", "Fun", "Nostalgia"],
+    "tags": [
+      "Web Art",
+      "Fun",
+      "Nostalgia"
+    ],
     "link": "https://zombo.com",
     "category": "fun"
   },
@@ -811,7 +1216,11 @@
     "title": "Superbad",
     "emoji": "🌈",
     "description": "1997 web-art maze—click endlessly through weird and colorful subpages.",
-    "tags": ["Web Art", "Surreal", "Fun"],
+    "tags": [
+      "Web Art",
+      "Surreal",
+      "Fun"
+    ],
     "link": "http://www.superbad.com",
     "category": "experimental"
   },
@@ -819,7 +1228,11 @@
     "title": "Mackerelmedia Fish",
     "emoji": "🐠",
     "description": "Explore abandoned web culture via an ARG-style browser game.",
-    "tags": ["Game", "ARG", "Web Culture"],
+    "tags": [
+      "Game",
+      "ARG",
+      "Web Culture"
+    ],
     "link": "http://mackerelmediafish.com",
     "category": "games"
   },
@@ -827,7 +1240,11 @@
     "title": "Poietic Generator",
     "emoji": "🎨",
     "description": "Collaborative net-art drawing game letting everyone co-create a global canvas.",
-    "tags": ["AI", "Net Art", "Collaborative"],
+    "tags": [
+      "AI",
+      "Net Art",
+      "Collaborative"
+    ],
     "link": "http://poietic-generator.net",
     "category": "experimental"
   },
@@ -835,7 +1252,11 @@
     "title": "Jabberwacky",
     "emoji": "🤖",
     "description": "A nostalgic chatbot from 1997—quirky, sometimes witty, sometimes weird.",
-    "tags": ["AI", "Chatbot", "Retro"],
+    "tags": [
+      "AI",
+      "Chatbot",
+      "Retro"
+    ],
     "link": "https://www.jabberwacky.com",
     "category": "ai-tools"
   },
@@ -843,7 +1264,11 @@
     "title": "Imagiyo",
     "emoji": "🖌️",
     "description": "Generate edgy or unrestricted AI images with simple lifetime pricing.",
-    "tags": ["AI", "Image Generation", "Unfiltered"],
+    "tags": [
+      "AI",
+      "Image Generation",
+      "Unfiltered"
+    ],
     "link": "https://imagiyo.com",
     "category": "creative"
   },
@@ -851,7 +1276,11 @@
     "title": "Deep Dream Generator",
     "emoji": "🔮",
     "description": "Create hallucinogenic, dream-like neural art—images or videos.",
-    "tags": ["AI", "Neural Art", "Creative"],
+    "tags": [
+      "AI",
+      "Neural Art",
+      "Creative"
+    ],
     "link": "https://deepdreamgenerator.com",
     "category": "creative"
   },
@@ -859,7 +1288,11 @@
     "title": "InspiroBot",
     "emoji": "😂",
     "description": "Absurd motivational quote generator powered by AI randomness.",
-    "tags": ["AI", "Quotes", "Humor"],
+    "tags": [
+      "AI",
+      "Quotes",
+      "Humor"
+    ],
     "link": "https://inspirobot.me",
     "category": "fun"
   },
@@ -867,8 +1300,20 @@
     "title": "Postmodernism Generator",
     "emoji": "🧩",
     "description": "Whip up an academic-sounding essay full of nonsense with one click.",
-    "tags": ["AI", "Text", "Parody"],
+    "tags": [
+      "AI",
+      "Text",
+      "Parody"
+    ],
     "link": "https://postmodernismgenerator.com",
     "category": "fun"
+  },
+  {
+    "title": "Bored HUmans",
+    "description": "100+ AI-powered quirky projects such as Guess-your-age, virtual pets, and weird image blending.. and AI farts...",
+    "link": "https://boredhumans.com/",
+    "category": "creative",
+    "emoji": "🤖",
+    "tags": []
   }
 ]

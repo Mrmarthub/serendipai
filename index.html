@@ -103,169 +103,6 @@
       cursor: not-allowed;
     }
 
-    /* Newsletter Section Styles */
-    .newsletter-section {
-      background: #fff;
-      color: #000;
-      border: 4px solid #000;
-      padding: 30px;
-      margin: 40px 0;
-      box-shadow: 8px 8px 0px #000;
-      position: relative;
-      text-align: center;
-    }
-
-    .newsletter-section::before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      border: 2px dashed #000;
-      pointer-events: none;
-    }
-
-    .newsletter-title {
-      font-size: 1.8rem;
-      color: #000;
-      margin-bottom: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      border-bottom: 2px solid #000;
-      padding-bottom: 10px;
-      display: inline-block;
-    }
-
-    .newsletter-description {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #000;
-      margin-bottom: 25px;
-      font-family: 'Courier New', monospace;
-    }
-
-    .newsletter-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .newsletter-input {
-      width: 100%;
-      padding: 15px;
-      border: 3px solid #000;
-      background: #fff;
-      color: #000;
-      font-family: 'Courier New', monospace;
-      font-size: 1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 4px 4px 0px #000;
-      transition: all 0.2s ease;
-    }
-
-    .newsletter-input:focus {
-      outline: none;
-      transform: translate(2px, 2px);
-      box-shadow: 2px 2px 0px #000;
-    }
-
-    .newsletter-input::placeholder {
-      color: #666;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .newsletter-submit {
-      background: #000;
-      color: #fff;
-      border: 3px solid #000;
-      padding: 15px 30px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-family: 'Courier New', monospace;
-      box-shadow: 4px 4px 0px #000;
-    }
-
-    .newsletter-submit:hover {
-      background: #fff;
-      color: #000;
-      transform: translate(2px, 2px);
-      box-shadow: 2px 2px 0px #000;
-    }
-
-    .newsletter-submit:active {
-      transform: translate(4px, 4px);
-      box-shadow: 0px 0px 0px #000;
-    }
-
-    .newsletter-submit:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    .newsletter-benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 25px;
-      text-align: left;
-    }
-
-    .benefit-item {
-      background: #000;
-      color: #fff;
-      padding: 15px;
-      border: 2px solid #000;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.9rem;
-    }
-
-    .newsletter-frequency {
-      margin-top: 15px;
-      font-size: 0.9rem;
-      color: #666;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .success-message {
-      background: #28a745;
-      color: #fff;
-      padding: 15px;
-      border: 3px solid #28a745;
-      margin-top: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 4px 4px 0px #000;
-      display: none;
-    }
-
-    .newsletter-error-message {
-      background: #dc3545;
-      color: #fff;
-      padding: 15px;
-      border: 3px solid #dc3545;
-      margin-top: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      box-shadow: 4px 4px 0px #000;
-      display: none;
-    }
-
     .project-card {
       background: #fff;
       color: #000;
@@ -497,6 +334,142 @@
       background: rgba(255, 107, 107, 0.1);
     }
 
+    /* Newsletter Section Styles */
+    .newsletter-section {
+      background: #fff;
+      color: #000;
+      border: 4px solid #000;
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: 8px 8px 0px #000;
+      position: relative;
+      text-align: center;
+    }
+
+    .newsletter-section::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 2px dashed #000;
+      pointer-events: none;
+    }
+
+    .newsletter-title {
+      font-size: 1.8rem;
+      color: #000;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #000;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+
+    .newsletter-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #000;
+      margin-bottom: 25px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .newsletter-input {
+      width: 100%;
+      padding: 15px;
+      border: 3px solid #000;
+      background: #fff;
+      color: #000;
+      font-family: 'Courier New', monospace;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 4px 4px 0px #000;
+      transition: all 0.2s ease;
+    }
+
+    .newsletter-input:focus {
+      outline: none;
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px #000;
+    }
+
+    .newsletter-input::placeholder {
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .newsletter-submit {
+      background: #000;
+      color: #fff;
+      border: 3px solid #000;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Courier New', monospace;
+      box-shadow: 4px 4px 0px #000;
+    }
+
+    .newsletter-submit:hover {
+      background: #fff;
+      color: #000;
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px #000;
+    }
+
+    .newsletter-submit:active {
+      transform: translate(4px, 4px);
+      box-shadow: 0px 0px 0px #000;
+    }
+
+    .newsletter-submit:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .success-message {
+      background: #28a745;
+      color: #fff;
+      padding: 15px;
+      border: 3px solid #28a745;
+      margin-top: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 4px 4px 0px #000;
+      display: none;
+    }
+
+    .newsletter-error-message {
+      background: #dc3545;
+      color: #fff;
+      padding: 15px;
+      border: 3px solid #dc3545;
+      margin-top: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 4px 4px 0px #000;
+      display: none;
+    }
+
     @media (max-width: 768px) {
       .header h1 {
         font-size: 2rem;
@@ -582,7 +555,7 @@
     // Configuration - Change this URL to point to your GitHub raw file
     const PROJECTS_URL = 'https://raw.githubusercontent.com/Mrmarthub/serendipai/main/website.json';
 
-    // Newsletter functionality
+    // Newsletter functionality - UPDATED TO USE YOUR ADMIN PANEL
     async function subscribeNewsletter(event) {
       event.preventDefault();
       
@@ -600,16 +573,31 @@
       submitBtn.textContent = '>> SUBSCRIBING... <<';
       
       try {
-        // For now, we'll simulate a successful subscription
-        // In a real implementation, you'd send this to your newsletter service
-        await simulateSubscription(email);
+        // Send to your admin panel API
+        const response = await fetch('https://serendip-admin-6pwzq39fw-etienne-martins-projects-60843ce2.vercel.app/api/newsletter-subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ 
+            email: email,
+            timestamp: new Date().toISOString(),
+            source: 'website'
+          })
+        });
+        
+        const result = await response.json();
+        
+        if (!response.ok) {
+          throw new Error(result.error || 'Subscription failed');
+        }
         
         // Show success message
         successMsg.style.display = 'block';
         document.getElementById('newsletter-email').value = '';
         
-        // Track subscription (you can add analytics here)
-        console.log('Newsletter subscription:', email);
+        // Track subscription
+        console.log('Newsletter subscription successful:', email);
         
       } catch (error) {
         console.error('Newsletter subscription error:', error);
@@ -619,21 +607,6 @@
         submitBtn.disabled = false;
         submitBtn.textContent = '>> SUBSCRIBE NOW <<';
       }
-    }
-
-    // Simulate newsletter subscription (replace with real service)
-    async function simulateSubscription(email) {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          // Basic email validation
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (emailRegex.test(email)) {
-            resolve();
-          } else {
-            reject(new Error('Invalid email'));
-          }
-        }, 1500); // Simulate network delay
-      });
     }
 
     // Enhanced random function that uses time-based seed

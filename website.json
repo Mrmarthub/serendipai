@@ -157,18 +157,6 @@
     "category": "ai-tools"
   },
   {
-    "title": "Runway Green Screen",
-    "emoji": "🎬",
-    "description": "AI-powered green screen removal without the green screen. Remove backgrounds from videos automatically.",
-    "tags": [
-      "AI",
-      "Video",
-      "Background Removal"
-    ],
-    "link": "https://runwayml.com/green-screen",
-    "category": "creative"
-  },
-  {
     "title": "AI Weirdness",
     "emoji": "🤪",
     "description": "A blog showcasing the hilarious and bizarre results when AI tries to understand human things. Neural networks being weird.",

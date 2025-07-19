@@ -973,18 +973,6 @@
     "category": "fun"
   },
   {
-    "title": "Quanto",
-    "emoji": "➕",
-    "description": "Generate weird math problems and solutions—AI-made math for amusement.",
-    "tags": [
-      "AI",
-      "Math",
-      "Fun"
-    ],
-    "link": "https://quanto.cc",
-    "category": "fun"
-  },
-  {
     "title": "Postmodernism Generator",
     "emoji": "🧾",
     "description": "Auto-generates satirical postmodern academic essays using recursive grammar.",

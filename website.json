@@ -337,18 +337,6 @@
     "category": "fun"
   },
   {
-    "title": "Latent Space Explorer",
-    "emoji": "🌀",
-    "description": "Visually navigate the 'latent space' of GANs to discover strange and beautiful in-between images.",
-    "tags": [
-      "AI",
-      "GAN",
-      "Exploration"
-    ],
-    "link": "https://latentspaceexplorer.com",
-    "category": "experimental"
-  },
-  {
     "title": "AI Roguelite",
     "emoji": "🗺️",
     "description": "An AI-generated dungeon crawler where the levels, monsters, and items are created on the fly as you play.",

@@ -725,7 +725,7 @@
           <div class="project-tags">
             ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
           </div>
-          <a href="${project.link}" target="_blank" class="project-link">
+          <a href="${project.link}" target="_blank" class="project-link" onclick="trackProjectClick(${JSON.stringify(project).replace(/"/g, '<a href="${project.link}" target="_blank" class="project-link">quot;)})">
             🚀 Explore Project
           </a>
         </div>
@@ -812,6 +812,17 @@
     // Load projects when page loads
     window.addEventListener('load', loadProjects);
   </script>
+
+function handleProjectClick(projectData) {
+    console.log('🎯 Project clicked:', projectData.title);
+    
+    if (typeof trackProjectClick === 'function') {
+        trackProjectClick(projectData);
+    }
+    
+    window.open(projectData.link, '_blank');
+    return false;
+}
 </body>
 
 <script>
@@ -857,5 +868,16 @@ window.addEventListener('load', function() {
     console.log('🚀 Analytics system ready');
 });
 </script>
+
+function handleProjectClick(projectData) {
+    console.log('🎯 Project clicked:', projectData.title);
+    
+    if (typeof trackProjectClick === 'function') {
+        trackProjectClick(projectData);
+    }
+    
+    window.open(projectData.link, '_blank');
+    return false;
+}
 
 </html>

@@ -191,6 +191,7 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       font-family: 'Courier New', monospace;
+      cursor: pointer;
     }
 
     .project-link:hover {
@@ -282,43 +283,6 @@
 
     .favorite-btn:hover {
       transform: scale(1.2);
-    }
-
-    .category-filter {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 20px 0;
-      flex-wrap: wrap;
-    }
-
-    .category-btn {
-      background: #fff;
-      color: #000;
-      border: 2px solid #fff;
-      padding: 8px 16px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: bold;
-      font-family: 'Courier New', monospace;
-      box-shadow: 2px 2px 0px #fff;
-    }
-
-    .category-btn:hover {
-      background: #000;
-      color: #fff;
-      transform: translate(1px, 1px);
-      box-shadow: 1px 1px 0px #fff;
-    }
-
-    .category-btn.active {
-      background: #000;
-      color: #fff;
-      transform: translate(2px, 2px);
-      box-shadow: 0px 0px 0px #fff;
     }
 
     .error-message {
@@ -548,14 +512,62 @@
     let currentCategory = 'all';
     let favorites = [];
     let viewedProjects = new Set();
-    let projects = []; // Will be loaded from external file
+    let projects = [];
     let projectsLoaded = false;
-    let randomSeed = Date.now(); // Seed for randomization
+    let randomSeed = Date.now();
 
-    // Configuration - Change this URL to point to your GitHub raw file
+    // Configuration
     const PROJECTS_URL = 'https://raw.githubusercontent.com/Mrmarthub/serendipai/main/website.json';
 
-    // Newsletter functionality - UPDATED TO USE YOUR ADMIN PANEL
+    // Analytics System
+    let projectAnalytics = JSON.parse(localStorage.getItem('serendip-analytics') || '{}');
+
+    // Track project clicks
+    function trackProjectClick(project) {
+        const key = project.title.toLowerCase().replace(/[^a-z0-9]/g, '-');
+        
+        if (!projectAnalytics[key]) {
+            projectAnalytics[key] = {
+                title: project.title,
+                link: project.link,
+                category: project.category || 'unknown',
+                clicks: 0,
+                lastClicked: null,
+                firstSeen: new Date().toISOString()
+            };
+        }
+        
+        projectAnalytics[key].clicks++;
+        projectAnalytics[key].lastClicked = new Date().toISOString();
+        
+        localStorage.setItem('serendip-analytics', JSON.stringify(projectAnalytics));
+        sendAnalyticsToServer();
+        
+        console.log(`📊 Tracked: ${project.title} (${projectAnalytics[key].clicks} clicks)`);
+    }
+
+    // Send analytics to admin panel
+    async function sendAnalyticsToServer() {
+        try {
+            await fetch('https://serendip-admin.vercel.app/api/analytics', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ analytics: projectAnalytics })
+            });
+        } catch (error) {
+            console.log('📊 Analytics sync queued');
+        }
+    }
+
+    // Handle project clicks with analytics
+    function handleProjectClick(project) {
+        console.log('🎯 Project clicked:', project.title);
+        trackProjectClick(project);
+        window.open(project.link, '_blank');
+        return false;
+    }
+
+    // Newsletter functionality
     async function subscribeNewsletter(event) {
       event.preventDefault();
       
@@ -564,16 +576,13 @@
       const successMsg = document.getElementById('success-message');
       const errorMsg = document.getElementById('newsletter-error-message');
       
-      // Hide previous messages
       successMsg.style.display = 'none';
       errorMsg.style.display = 'none';
       
-      // Disable button and show loading
       submitBtn.disabled = true;
       submitBtn.textContent = '>> SUBSCRIBING... <<';
       
       try {
-        // Send to your admin panel API
         const response = await fetch('https://serendip-admin.vercel.app/api/newsletter-subscribe', {
           method: 'POST',
           headers: {
@@ -585,14 +594,235 @@
             source: 'website'
           })
         });
-
-function handleProjectClick(projectData) {
-    console.log("🎯 Project clicked:", projectData.title);
-    if (typeof trackProjectClick === "function") {
-        trackProjectClick(projectData);
+        
+        const result = await response.json();
+        
+        if (!response.ok) {
+          throw new Error(result.error || 'Subscription failed');
+        }
+        
+        successMsg.style.display = 'block';
+        document.getElementById('newsletter-email').value = '';
+        console.log('Newsletter subscription successful:', email);
+        
+      } catch (error) {
+        console.error('Newsletter subscription error:', error);
+        errorMsg.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = '>> SUBSCRIBE NOW <<';
+      }
     }
-    window.open(projectData.link, "_blank");
-    return false;
-}
-</script>
+
+    // Enhanced random functions
+    function getRandomIndex(max) {
+      randomSeed = (randomSeed * 1103515245 + 12345) & 0x7fffffff;
+      return Math.floor((randomSeed / 0x7fffffff) * max);
+    }
+
+    function getSecureRandomIndex(max) {
+      if (window.crypto && window.crypto.getRandomValues) {
+        const array = new Uint32Array(1);
+        window.crypto.getRandomValues(array);
+        return Math.floor((array[0] / 0xffffffff) * max);
+      } else {
+        const now = Date.now();
+        const timeFactor = (now % 1000) / 1000;
+        return Math.floor((Math.random() + timeFactor) % 1 * max);
+      }
+    }
+
+    // Load projects from GitHub
+    async function loadProjects() {
+      try {
+        showLoading();
+        const response = await fetch(PROJECTS_URL);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        projects = await response.json();
+        projectsLoaded = true;
+        
+        shuffleArray(projects);
+        hideLoading();
+        
+        setTimeout(() => {
+          getRandomFirstProject();
+        }, 100);
+      } catch (error) {
+        console.error('Error loading projects:', error);
+        hideLoading();
+        showError('Failed to load projects. Please check the projects URL and try again.');
+      }
+    }
+
+    // Fisher-Yates shuffle algorithm
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = getSecureRandomIndex(i + 1);
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function getRandomFirstProject() {
+      if (projects.length === 0) {
+        showError('No projects available.');
+        return;
+      }
+
+      const filteredProjects = getFilteredProjects();
+      
+      const method1 = getSecureRandomIndex(filteredProjects.length);
+      const method2 = Math.floor(Math.random() * filteredProjects.length);
+      const method3 = getRandomIndex(filteredProjects.length);
+      
+      const combinedIndex = (method1 + method2 + method3) % filteredProjects.length;
+      const selectedProject = filteredProjects[combinedIndex];
+      
+      viewedProjects.add(selectedProject.title);
+      currentProject = selectedProject;
+      
+      displayProject(currentProject);
+    }
+
+    function showError(message) {
+      const projectContainer = document.getElementById('currentProject');
+      projectContainer.innerHTML = `
+        <div class="error-message">
+          ${message}
+        </div>
+      `;
+    }
+
+    function getFilteredProjects() {
+      if (currentCategory === 'all') {
+        return projects;
+      }
+      return projects.filter(project => project.category === currentCategory);
+    }
+
+    function displayProject(project) {
+      if (!project) return;
+      
+      const projectIndex = projects.indexOf(project);
+      
+      const projectHtml = `
+        <div class="project-card">
+          <div class="project-title">
+            <span class="project-emoji">${project.emoji}</span>
+            ${project.title}
+            <button class="favorite-btn" onclick="toggleFavorite(${projectIndex})" title="Add to favorites">
+              ${favorites.includes(projectIndex) ? '❤️' : '🤍'}
+            </button>
+          </div>
+          <div class="project-description">${project.description}</div>
+          <div class="project-tags">
+            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+          </div>
+          <div class="project-link" onclick="handleProjectClick({title: '${project.title.replace(/'/g, "\\'")}', link: '${project.link}', category: '${project.category || 'unknown'}'})">
+            🚀 Explore Project
+          </div>
+        </div>
+      `;
+      
+      const projectContainer = document.getElementById('currentProject');
+      projectContainer.innerHTML = projectHtml;
+      
+      setTimeout(() => {
+        const card = projectContainer.querySelector('.project-card');
+        if (card) {
+          card.classList.add('show');
+        }
+      }, 100);
+    }
+
+    function stumbleToNext() {
+      if (!projectsLoaded) {
+        showError('Projects are still loading. Please wait...');
+        return;
+      }
+
+      if (projects.length === 0) {
+        showError('No projects available.');
+        return;
+      }
+
+      showLoading();
+      
+      setTimeout(() => {
+        const filteredProjects = getFilteredProjects();
+        
+        const unviewedProjects = filteredProjects.filter(project => 
+          !viewedProjects.has(project.title)
+        );
+        
+        let selectedProject;
+        
+        if (unviewedProjects.length > 0) {
+          const randomIndex = getSecureRandomIndex(unviewedProjects.length);
+          selectedProject = unviewedProjects[randomIndex];
+        } else {
+          viewedProjects.clear();
+          const randomIndex = getSecureRandomIndex(filteredProjects.length);
+          selectedProject = filteredProjects[randomIndex];
+        }
+        
+        viewedProjects.add(selectedProject.title);
+        currentProject = selectedProject;
+        
+        hideLoading();
+        displayProject(currentProject);
+      }, 1000);
+    }
+
+    function showLoading() {
+      document.getElementById('loading').style.display = 'block';
+      document.getElementById('currentProject').style.display = 'none';
+      document.getElementById('stumbleBtn').disabled = true;
+    }
+
+    function hideLoading() {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('currentProject').style.display = 'block';
+      document.getElementById('stumbleBtn').disabled = false;
+    }
+
+    function toggleFavorite(projectIndex) {
+      const index = favorites.indexOf(projectIndex);
+      if (index > -1) {
+        favorites.splice(index, 1);
+      } else {
+        favorites.push(projectIndex);
+      }
+      displayProject(currentProject);
+    }
+
+    // Load server analytics on page load
+    async function loadServerAnalytics() {
+        try {
+            const response = await fetch('https://serendip-admin.vercel.app/api/analytics');
+            if (response.ok) {
+                const data = await response.json();
+                Object.keys(data.analytics || {}).forEach(key => {
+                    if (!projectAnalytics[key] || projectAnalytics[key].clicks < data.analytics[key].clicks) {
+                        projectAnalytics[key] = data.analytics[key];
+                    }
+                });
+                localStorage.setItem('serendip-analytics', JSON.stringify(projectAnalytics));
+            }
+        } catch (error) {
+            console.log('📊 Using local analytics only');
+        }
+    }
+
+    // Initialize everything when page loads
+    window.addEventListener('load', function() {
+        console.log('🚀 Analytics system ready');
+        loadServerAnalytics();
+        loadProjects();
+    });
+  </script>
+</body>
 </html>

@@ -679,15 +679,14 @@
   },
   {
     "title": "Jabberwacky",
-    "emoji": "💬",
     "description": "A whimsical chatbot from 1997 aiming to pass as human with humorous conversation.",
+    "link": "https://www.jabberwacky.com",
+    "category": "other",
+    "emoji": "💬",
     "tags": [
-      "AI",
       "Chatbot",
       "Retro"
-    ],
-    "link": "https://www.jabberwacky.com",
-    "category": "ai-tools"
+    ]
   },
   {
     "title": "Nothing, Forever",
@@ -1027,15 +1026,14 @@
   },
   {
     "title": "Postmodernism Generator",
-    "emoji": "📃",
     "description": "Instantly generate parody academic essays with a postmodern flair.",
+    "link": "https://www.elsewhere.org/journal/pomo/",
+    "category": "creative",
+    "emoji": "📃",
     "tags": [
-      "AI",
       "Essay",
       "Parody"
-    ],
-    "link": "https://postmodernismgenerator.com",
-    "category": "fun"
+    ]
   },
   {
     "title": "Zombo.com",

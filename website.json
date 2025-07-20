@@ -1172,5 +1172,16 @@
     "category": "creative",
     "emoji": "✈️",
     "tags": []
+  },
+  {
+    "title": "Khroma",
+    "description": "Uses AI to learn which colors you like and creates limitless palettes for you to discover, search, and save.\n",
+    "link": "https://www.khroma.co/",
+    "category": "creative",
+    "emoji": "🎨",
+    "tags": [
+      "Palettes",
+      "Art"
+    ]
   }
 ]

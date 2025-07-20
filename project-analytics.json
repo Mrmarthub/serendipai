@@ -30,5 +30,13 @@
     "clicks": 1,
     "lastClicked": "2025-07-20T16:24:17.051Z",
     "firstSeen": "2025-07-20T16:24:17.051Z"
+  },
+  "magenta-studio": {
+    "title": "Magenta Studio",
+    "link": "https://magenta.tensorflow.org/studio",
+    "category": "creative",
+    "clicks": 1,
+    "lastClicked": "2025-07-20T16:25:24.372Z",
+    "firstSeen": "2025-07-20T16:25:24.372Z"
   }
 }

@@ -1,16 +1,15 @@
 [
   {
     "title": "Superme.ai",
+    "description": "Use AI to ask real people... or ar they real?",
+    "link": "https://superme.ai",
+    "category": "tools",
     "emoji": "🚀",
-    "description": "Use AI to ask real people... or ar they?",
     "tags": [
-      "AI",
       "Humor",
       "Startups",
       "Creative"
-    ],
-    "link": "https://superme.ai",
-    "category": "ai-tools"
+    ]
   },
   {
     "title": "This Person Does Not Exist",

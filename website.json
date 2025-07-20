@@ -431,27 +431,25 @@
   },
   {
     "title": "GenType",
+    "description": "Generate one-of-a-kind alphabets using AI in this fun  Labs experiment.",
+    "link": "https://labs.google/gentype",
+    "category": "creative",
     "emoji": "🔠",
-    "description": "Generate one-of-a-kind alphabets using AI in this fun Google Labs experiment.",
     "tags": [
-      "AI",
       "Fonts",
       "Creative"
-    ],
-    "link": "https://labs.google/experiments/GenType",
-    "category": "creative"
+    ]
   },
   {
     "title": "National Gallery Mixtape",
-    "emoji": "🎼",
     "description": "Create a soundtrack inspired by National Gallery paintings using AI.",
+    "link": "https://artsandculture.google.com/experiment/national-gallery-mixtape/iwHPaSXS-zrryg?hl=en",
+    "category": "creative",
+    "emoji": "🎼",
     "tags": [
-      "AI",
       "Music",
       "Art"
-    ],
-    "link": "https://labs.google/experiments/national-gallery-mixtape",
-    "category": "creative"
+    ]
   },
   {
     "title": "Google AI Experiments",
@@ -503,15 +501,14 @@
   },
   {
     "title": "Evolution by Keiwan",
-    "emoji": "🦠",
     "description": "Watch AI-generated creatures evolve in abstract art—strange and mesmerizing.",
+    "link": "https://keiwan.itch.io/evolution",
+    "category": "robotics",
+    "emoji": "🦠",
     "tags": [
-      "AI",
       "Art",
       "Experimental"
-    ],
-    "link": "https://keiwan.github.io/evolution/",
-    "category": "experimental"
+    ]
   },
   {
     "title": "AIVA",
@@ -599,15 +596,14 @@
   },
   {
     "title": "Blob Opera",
-    "emoji": "🎶",
     "description": "Create opera harmonies by dragging adorable blob voices—AI assembles them into a chorus.",
+    "link": "https://blobopera.io/",
+    "category": "creative",
+    "emoji": "🎶",
     "tags": [
-      "AI",
       "Music",
       "Fun"
-    ],
-    "link": "https://microsoft.github.io/BlobOpera/",
-    "category": "creative"
+    ]
   },
   {
     "title": "Fontjoy",
@@ -623,27 +619,15 @@
   },
   {
     "title": "Semiconductor",
-    "emoji": "🎻",
     "description": "Conduct a virtual orchestra using your webcam—move to make AI-generated music.",
+    "link": "https://experiments.withgoogle.com/semi-conductor",
+    "category": "creative",
+    "emoji": "🎻",
     "tags": [
       "AI",
       "Music",
       "Interactive"
-    ],
-    "link": "https://semiconductor.io",
-    "category": "creative"
-  },
-  {
-    "title": "Giorgio Cam",
-    "emoji": "🎤",
-    "description": "Snap a picture and AI spits rap lyrics about it—AI-powered image-to-rap.",
-    "tags": [
-      "AI",
-      "Image Recognition",
-      "Fun"
-    ],
-    "link": "https://experiment.withgoogle.com/giorgio-cam",
-    "category": "fun"
+    ]
   },
   {
     "title": "Zombo.com",

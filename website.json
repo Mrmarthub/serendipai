@@ -72,18 +72,6 @@
     "category": "games"
   },
   {
-    "title": "Talk to Transformer",
-    "emoji": "🤖",
-    "description": "GPT-2 powered text completion tool. Start typing and watch AI continue your thoughts in surprisingly coherent ways.",
-    "tags": [
-      "AI",
-      "Text Generation",
-      "GPT"
-    ],
-    "link": "https://talktotransformer.com",
-    "category": "ai-tools"
-  },
-  {
     "title": "DeepFakes Web",
     "emoji": "🎭",
     "description": "Online deepfake maker that uses AI to swap faces in videos. Create realistic face swaps with just a few clicks.",

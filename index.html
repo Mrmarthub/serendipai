@@ -574,7 +574,7 @@
       
       try {
         // Send to your admin panel API
-        const response = await fetch('https://serendip-admin-6pwzq39fw-etienne-martins-projects-60843ce2.vercel.app/api/newsletter-subscribe', {
+        const response = await fetch('https://serendip-admin.vercel.app/api/newsletter-subscribe', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -813,5 +813,49 @@
     window.addEventListener('load', loadProjects);
   </script>
 </body>
+
+<script>
+// Serendip.AI Analytics System
+let projectAnalytics = JSON.parse(localStorage.getItem('serendip-analytics') || '{}');
+
+function trackProjectClick(project) {
+    const key = project.title.toLowerCase().replace(/[^a-z0-9]/g, '-');
+    
+    if (!projectAnalytics[key]) {
+        projectAnalytics[key] = {
+            title: project.title,
+            link: project.link,
+            category: project.category || 'unknown',
+            clicks: 0,
+            lastClicked: null,
+            firstSeen: new Date().toISOString()
+        };
+    }
+    
+    projectAnalytics[key].clicks++;
+    projectAnalytics[key].lastClicked = new Date().toISOString();
+    
+    localStorage.setItem('serendip-analytics', JSON.stringify(projectAnalytics));
+    sendAnalyticsToServer();
+    
+    console.log(`📊 Tracked: ${project.title} (${projectAnalytics[key].clicks} clicks)`);
+}
+
+async function sendAnalyticsToServer() {
+    try {
+        await fetch('https://serendip-admin.vercel.app/api/analytics', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ analytics: projectAnalytics })
+        });
+    } catch (error) {
+        console.log('📊 Analytics sync queued');
+    }
+}
+
+window.addEventListener('load', function() {
+    console.log('🚀 Analytics system ready');
+});
+</script>
 
 </html>

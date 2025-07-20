@@ -585,6 +585,16 @@
             source: 'website'
           })
         });
+
+function handleProjectClick(projectData) {
+    console.log("🎯 Project clicked:", projectData.title);
+    if (typeof trackProjectClick === "function") {
+        trackProjectClick(projectData);
+    }
+    window.open(projectData.link, "_blank");
+    return false;
+}
+</script>
         
         const result = await response.json();
         
@@ -811,18 +821,7 @@
 
     // Load projects when page loads
     window.addEventListener('load', loadProjects);
-  </script>
-
-function handleProjectClick(projectData) {
-    console.log('🎯 Project clicked:', projectData.title);
-    
-    if (typeof trackProjectClick === 'function') {
-        trackProjectClick(projectData);
-    }
-    
-    window.open(projectData.link, '_blank');
-    return false;
-}
+  
 
 </body>
 
@@ -860,6 +859,16 @@ async function sendAnalyticsToServer() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ analytics: projectAnalytics })
         });
+
+function handleProjectClick(projectData) {
+    console.log("🎯 Project clicked:", projectData.title);
+    if (typeof trackProjectClick === "function") {
+        trackProjectClick(projectData);
+    }
+    window.open(projectData.link, "_blank");
+    return false;
+}
+</script>
     } catch (error) {
         console.log('📊 Analytics sync queued');
     }
@@ -868,18 +877,15 @@ async function sendAnalyticsToServer() {
 window.addEventListener('load', function() {
     console.log('🚀 Analytics system ready');
 });
-</script>
 
 function handleProjectClick(projectData) {
-    console.log('🎯 Project clicked:', projectData.title);
-    
-    if (typeof trackProjectClick === 'function') {
+    console.log("🎯 Project clicked:", projectData.title);
+    if (typeof trackProjectClick === "function") {
         trackProjectClick(projectData);
     }
-    
-    window.open(projectData.link, '_blank');
+    window.open(projectData.link, "_blank");
     return false;
 }
-
+</script>
 
 </html>

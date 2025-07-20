@@ -252,18 +252,6 @@
     "category": "fun"
   },
   {
-    "title": "AI Painter",
-    "emoji": "🎨",
-    "description": "Transform your photos into artwork using AI. Apply various artistic styles from famous painters.",
-    "tags": [
-      "AI",
-      "Art",
-      "Style Transfer"
-    ],
-    "link": "https://aipainter.com",
-    "category": "creative"
-  },
-  {
     "title": "Dream Interpreter AI",
     "emoji": "🌙",
     "description": "Type your dream and let the AI give you a surreal and poetic interpretation. It blends psychology, symbolism, and a bit of absurdity.",
@@ -396,15 +384,14 @@
   },
   {
     "title": "Even Stranger Things",
-    "emoji": "👻",
     "description": "Turn any photo into a Stranger Things-style poster with this quirky AI filter.",
+    "link": "https://evenstranger.pw/",
+    "category": "creative",
+    "emoji": "👻",
     "tags": [
-      "AI",
       "Filter",
       "Fun"
-    ],
-    "link": "https://strangethingsexperiment.com",
-    "category": "fun"
+    ]
   },
   {
     "title": "AutoDraw",
@@ -420,15 +407,15 @@
   },
   {
     "title": "Semantris",
+    "description": "Addictive word association game based on semantic vectors.",
+    "link": "https://research.google.com/semantris",
+    "category": "games",
     "emoji": "🔠",
-    "description": "Google’s addictive word association game based on semantic vectors.",
     "tags": [
       "AI",
       "Word Game",
       "NLP"
-    ],
-    "link": "https://research.google.com/semantris",
-    "category": "games"
+    ]
   },
   {
     "title": "Thing Translator",

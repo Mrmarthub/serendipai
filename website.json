@@ -301,15 +301,14 @@
   },
   {
     "title": "AI Roguelite",
+    "description": "AI Roguelite is the world's first RPG to use LLM's to direct real game mechanics.",
+    "link": "https://airoguelite.net/",
+    "category": "games",
     "emoji": "🗺️",
-    "description": "An AI-generated dungeon crawler where the levels, monsters, and items are created on the fly as you play.",
     "tags": [
-      "AI",
       "Gaming",
       "Procedural Generation"
-    ],
-    "link": "https://airoguelite.com",
-    "category": "games"
+    ]
   },
   {
     "title": "Deep Nostalgia",

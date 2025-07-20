@@ -725,7 +725,7 @@
           <div class="project-tags">
             ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
           </div>
-          <a href="${project.link}" target="_blank" class="project-link" onclick="trackProjectClick(${JSON.stringify(project).replace(/"/g, '<a href="${project.link}" target="_blank" class="project-link">quot;)})">
+          <a href="${project.link}" target="_blank" class="project-link" onclick="handleProjectClick({title: project.title, link: project.link, category: project.category}); return false;">
             🚀 Explore Project
           </a>
         </div>

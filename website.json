@@ -109,15 +109,15 @@
   },
   {
     "title": "This Cat Does Not Exist",
-    "emoji": "🐱",
     "description": "Like This Person Does Not Exist, but for cats! AI-generated feline faces that look surprisingly real.",
+    "link": "https://thesecatsdonotexist.com/",
+    "category": "creative",
+    "emoji": "🐱",
     "tags": [
       "AI",
       "Cats",
       "Neural Networks"
-    ],
-    "link": "https://thiscatdoesnotexist.com",
-    "category": "fun"
+    ]
   },
   {
     "title": "Remove.bg",

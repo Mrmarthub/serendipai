@@ -182,5 +182,13 @@
     "clicks": 1,
     "lastClicked": "2025-07-21T09:28:26.872Z",
     "firstSeen": "2025-07-21T09:28:26.872Z"
+  },
+  "freddiemeter": {
+    "title": "FreddieMeter",
+    "link": "https://experiments.withgoogle.com/freddiemeter",
+    "category": "fun",
+    "clicks": 1,
+    "lastClicked": "2025-07-21T09:34:26.395Z",
+    "firstSeen": "2025-07-21T09:34:26.395Z"
   }
 }

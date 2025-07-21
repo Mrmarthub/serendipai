@@ -254,5 +254,13 @@
     "clicks": 1,
     "lastClicked": "2025-07-21T11:39:58.605Z",
     "firstSeen": "2025-07-21T11:39:58.603Z"
+  },
+  "ai-book-writer": {
+    "title": "AI Book Writer",
+    "link": "https://example-bookwriter.ai",
+    "category": "tools",
+    "clicks": 1,
+    "lastClicked": "2025-07-21T11:53:25.684Z",
+    "firstSeen": "2025-07-21T11:53:25.680Z"
   }
 }

@@ -262,5 +262,13 @@
     "clicks": 1,
     "lastClicked": "2025-07-21T11:53:25.684Z",
     "firstSeen": "2025-07-21T11:53:25.680Z"
+  },
+  "this-resume-does-not-exist": {
+    "title": "This Resume Does Not Exist",
+    "link": "https://thisresumedoesnotexist.com",
+    "category": "fun",
+    "clicks": 1,
+    "lastClicked": "2025-07-21T11:54:18.186Z",
+    "firstSeen": "2025-07-21T11:54:18.186Z"
   }
 }

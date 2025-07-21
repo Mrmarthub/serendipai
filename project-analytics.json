@@ -166,5 +166,13 @@
     "clicks": 1,
     "lastClicked": "2025-07-21T08:53:50.925Z",
     "firstSeen": "2025-07-21T08:53:50.925Z"
+  },
+  "infinite-drum-machine": {
+    "title": "Infinite Drum Machine",
+    "link": "https://experiments.withgoogle.com/drum-machine",
+    "category": "games",
+    "clicks": 1,
+    "lastClicked": "2025-07-21T09:21:08.185Z",
+    "firstSeen": "2025-07-21T09:21:08.185Z"
   }
 }

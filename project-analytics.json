@@ -238,5 +238,13 @@
     "clicks": 1,
     "lastClicked": "2025-07-21T10:45:19.197Z",
     "firstSeen": "2025-07-21T10:45:19.197Z"
+  },
+  "fakeyou": {
+    "title": "FakeYou",
+    "link": "https://fakeyou.com",
+    "category": "fun",
+    "clicks": 1,
+    "lastClicked": "2025-07-21T10:46:17.914Z",
+    "firstSeen": "2025-07-21T10:46:17.914Z"
   }
 }

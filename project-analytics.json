@@ -270,5 +270,13 @@
     "clicks": 2,
     "lastClicked": "2025-07-21T12:00:51.917Z",
     "firstSeen": "2025-07-21T11:54:18.186Z"
+  },
+  "zombo-com": {
+    "title": "Zombo.com",
+    "link": "https://www.zombo.com",
+    "category": "fun",
+    "clicks": 1,
+    "lastClicked": "2025-07-21T12:01:43.460Z",
+    "firstSeen": "2025-07-21T12:01:43.460Z"
   }
 }

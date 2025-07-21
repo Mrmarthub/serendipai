@@ -371,18 +371,6 @@
     "category": "tools"
   },
   {
-    "title": "AI Duet",
-    "emoji": "🎹",
-    "description": "Play the piano and listen as the AI improvises a duet in real time.",
-    "tags": [
-      "AI",
-      "Music",
-      "Interactive"
-    ],
-    "link": "https://experiments.withgoogle.com/ai/ai-duet",
-    "category": "creative"
-  },
-  {
     "title": "Even Stranger Things",
     "description": "Turn any photo into a Stranger Things-style poster with this quirky AI filter.",
     "link": "https://evenstranger.pw/",
@@ -726,15 +714,14 @@
   },
   {
     "title": "AI Duet",
-    "emoji": "🎹",
     "description": "Play piano and have AI improvise along—the perfect musical partner.",
+    "link": "https://experiments.withgoogle.com/ai/ai-duet/view/",
+    "category": "creative",
+    "emoji": "🎹",
     "tags": [
-      "AI",
       "Music",
       "Interactive"
-    ],
-    "link": "https://experiments.withgoogle.com/ai/ai-duet",
-    "category": "creative"
+    ]
   },
   {
     "title": "Talk to Books",

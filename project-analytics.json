@@ -214,5 +214,13 @@
     "clicks": 1,
     "lastClicked": "2025-07-21T09:36:21.361Z",
     "firstSeen": "2025-07-21T09:36:21.361Z"
+  },
+  "aiva": {
+    "title": "AIVA",
+    "link": "https://www.aiva.ai",
+    "category": "creative",
+    "clicks": 1,
+    "lastClicked": "2025-07-21T09:36:30.961Z",
+    "firstSeen": "2025-07-21T09:36:30.961Z"
   }
 }

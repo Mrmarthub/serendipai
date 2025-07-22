@@ -302,5 +302,13 @@
     "clicks": 1,
     "lastClicked": "2025-07-21T17:23:24.413Z",
     "firstSeen": "2025-07-21T17:23:24.413Z"
+  },
+  "waifu2x": {
+    "title": "Waifu2x",
+    "link": "https://waifu2x.udp.jp",
+    "category": "ai-tools",
+    "clicks": 1,
+    "lastClicked": "2025-07-22T10:05:02.461Z",
+    "firstSeen": "2025-07-22T10:05:02.461Z"
   }
 }

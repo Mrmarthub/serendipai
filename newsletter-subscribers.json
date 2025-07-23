@@ -22,5 +22,11 @@
     "subscribedAt": "2025-07-21T12:26:25.041Z",
     "source": "website",
     "active": true
+  },
+  {
+    "email": "remi.boisson@gmail.com",
+    "subscribedAt": "2025-07-23T12:50:55.861Z",
+    "source": "website",
+    "active": true
   }
 ]

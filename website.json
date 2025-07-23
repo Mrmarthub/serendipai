@@ -1158,5 +1158,16 @@
       "Palettes",
       "Art"
     ]
+  },
+  {
+    "title": "Apreggiator",
+    "description": "Move your hand to create some music",
+    "link": "https://huggingface.co/spaces/stereoDrift/arpeggiator",
+    "category": "creative",
+    "emoji": "🎶",
+    "tags": [
+      "Music",
+      "Camera"
+    ]
   }
 ]

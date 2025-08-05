@@ -929,8 +929,8 @@
   },
   {
     "title": "Emoji Generator",
-    "description": "Upload a selfie and get custom emoji-style outputs of your face.",
-    "link": "https://www.emojis.com/",
+    "description": "Custom emoji-style outputs based on text input.",
+    "link": "https://emojipedia.org/ai-emoji-generator",
     "category": "creative",
     "emoji": "😜",
     "tags": [

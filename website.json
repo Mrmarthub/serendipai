@@ -953,27 +953,27 @@
   },
   {
     "title": "AI Book Writer",
-    "emoji": "📖",
     "description": "Enter a topic and let AI generate chapters or full book drafts automatically.",
+    "link": "https://www.squibler.io/",
+    "category": "tools",
+    "emoji": "📖",
     "tags": [
       "AI",
       "Writing",
       "Text Generation"
-    ],
-    "link": "https://example-bookwriter.ai",
-    "category": "tools"
+    ]
   },
   {
     "title": "Tarot Master",
-    "emoji": "🔮",
     "description": "Draw tarot cards virtually and get AI-powered interpretations.",
+    "link": "https://tarotmaster.ai/",
+    "category": "vision",
+    "emoji": "🔮",
     "tags": [
       "AI",
       "Mystic",
       "Fun"
-    ],
-    "link": "https://example-tarotmaster.ai",
-    "category": "fun"
+    ]
   },
   {
     "title": "FakeYou",

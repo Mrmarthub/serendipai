@@ -928,28 +928,16 @@
     "category": "creative"
   },
   {
-    "title": "AI Girlfriend Chat (Amino)",
-    "emoji": "❤️",
-    "description": "Chat with a virtual AI girlfriend—roleplay, story, and banter included.",
-    "tags": [
-      "AI",
-      "Chatbot",
-      "Companionship"
-    ],
-    "link": "https://example-aigfchat.com",
-    "category": "fun"
-  },
-  {
     "title": "Emoji Generator",
-    "emoji": "😜",
     "description": "Upload a selfie and get custom emoji-style outputs of your face.",
+    "link": "https://www.emojis.com/",
+    "category": "creative",
+    "emoji": "😜",
     "tags": [
       "AI",
       "Face",
       "Emoji"
-    ],
-    "link": "https://example-emojify.com",
-    "category": "fun"
+    ]
   },
   {
     "title": "YouTube Summarizer",

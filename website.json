@@ -941,15 +941,15 @@
   },
   {
     "title": "YouTube Summarizer",
-    "emoji": "🎥",
     "description": "Paste a YouTube link and get an AI-generated summary of the video’s key points.",
+    "link": "https://notegpt.io/youtube-video-summarizer",
+    "category": "tools",
+    "emoji": "🎥",
     "tags": [
       "AI",
       "Summarization",
       "Video"
-    ],
-    "link": "https://example-ytsummarizer.ai",
-    "category": "tools"
+    ]
   },
   {
     "title": "AI Book Writer",

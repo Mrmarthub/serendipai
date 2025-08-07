@@ -342,5 +342,13 @@
     "clicks": 1,
     "lastClicked": "2025-07-23T12:52:59.195Z",
     "firstSeen": "2025-07-23T12:52:59.195Z"
+  },
+  "ai-spongebob": {
+    "title": "AI SpongeBob",
+    "link": "https://en.wikipedia.org/wiki/Ai_sponge",
+    "category": "fun",
+    "clicks": 1,
+    "lastClicked": "2025-08-07T21:02:03.786Z",
+    "firstSeen": "2025-08-07T21:02:03.786Z"
   }
 }

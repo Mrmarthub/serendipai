@@ -350,5 +350,13 @@
     "clicks": 1,
     "lastClicked": "2025-08-07T21:02:03.786Z",
     "firstSeen": "2025-08-07T21:02:03.786Z"
+  },
+  "attngan": {
+    "title": "AttnGAN",
+    "link": "https://github.com/taoxugit/AttnGAN",
+    "category": "experimental",
+    "clicks": 1,
+    "lastClicked": "2025-10-03T22:19:06.893Z",
+    "firstSeen": "2025-10-03T22:19:06.893Z"
   }
 }
